@@ -222,9 +222,12 @@
           <!-- Recent Activities & Quick Actions -->
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
             <div class="lg:col-span-7 rounded-2xl bg-theme-surface border border-theme-strong p-6 sm:p-7 shadow-theme-soft">
-              <div class="flex items-center justify-between mb-5">
-                <h2 class="font-serif-editorial text-2xl font-bold text-theme-primary">Recent Conservation Activities</h2>
-                <span class="text-xs font-mono-code text-theme-gold">Live Studio Feed</span>
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-4 mb-5">
+                <h2 class="font-serif-editorial text-xl sm:text-2xl font-bold text-theme-primary">Recent Conservation Activities</h2>
+                <span class="text-xs font-mono-code text-theme-gold self-start sm:self-auto shrink-0 flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                  Live Studio Feed
+                </span>
               </div>
               <ul id="overview-activity-list" class="space-y-4"></ul>
             </div>
@@ -232,7 +235,7 @@
             <div class="lg:col-span-5 rounded-2xl bg-theme-secondary border border-theme-strong p-6 sm:p-7 flex flex-col justify-between">
               <div class="space-y-4">
                 <span class="text-xs font-mono-code uppercase tracking-wider text-theme-gold font-semibold">Quick Actions</span>
-                <h3 class="font-serif-editorial text-2xl font-bold text-theme-primary">Start a New Restoration or Inspect Proofs</h3>
+                <h3 class="font-serif-editorial text-xl sm:text-2xl font-bold text-theme-primary">Start a New Restoration or Inspect Proofs</h3>
                 <p class="text-xs sm:text-sm text-theme-secondary leading-relaxed">
                   Have another vintage photograph to restore? Drag and drop your scan or review Proof v1 for your 1951 Shimla Summer Portrait.
                 </p>
@@ -319,23 +322,26 @@
             <div class="p-6 sm:p-8 border-b border-theme flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div>
                 <span class="text-xs font-mono-code uppercase tracking-wider text-theme-gold font-semibold">Client Archive Ledger</span>
-                <h2 class="font-serif-editorial text-3xl font-bold text-theme-primary mt-0.5">My Restoration Projects</h2>
+                <h2 class="font-serif-editorial text-2xl sm:text-3xl font-bold text-theme-primary mt-0.5">My Restoration Projects</h2>
               </div>
-              <button type="button" data-jump-tab="upload" class="btn-luxury-primary !py-2.5 !px-5 text-xs">
-                + New Restoration Request
-              </button>
+              <div class="flex items-center gap-3">
+                <span class="text-[11px] font-mono-code text-theme-gold/80 sm:hidden">Swipe table →</span>
+                <button type="button" data-jump-tab="upload" class="btn-luxury-primary !py-2.5 !px-5 text-xs">
+                  + New Restoration Request
+                </button>
+              </div>
             </div>
 
-            <div class="overflow-x-auto">
-              <table class="w-full min-w-[720px] text-left border-collapse">
+            <div class="overflow-x-auto scrollbar-thin">
+              <table class="w-full min-w-[980px] text-left border-collapse">
                 <thead>
                   <tr class="bg-theme-secondary border-b border-theme text-[11px] font-mono-code uppercase text-theme-muted">
-                    <th class="p-4 whitespace-nowrap min-w-[220px]">Original Photograph &amp; Notes</th>
-                    <th class="p-4 whitespace-nowrap">Project ID</th>
-                    <th class="p-4 whitespace-nowrap">Submitted</th>
-                    <th class="p-4 whitespace-nowrap">Assigned Service</th>
-                    <th class="p-4 whitespace-nowrap">Current Status</th>
-                    <th class="p-4 text-right whitespace-nowrap">Actions</th>
+                    <th class="py-3.5 px-4 sm:px-6 whitespace-nowrap min-w-[280px]">Original Photograph &amp; Notes</th>
+                    <th class="py-3.5 px-4 whitespace-nowrap min-w-[110px]">Project ID</th>
+                    <th class="py-3.5 px-4 whitespace-nowrap min-w-[120px]">Submitted</th>
+                    <th class="py-3.5 px-4 whitespace-nowrap min-w-[180px]">Assigned Service</th>
+                    <th class="py-3.5 px-4 whitespace-nowrap min-w-[180px]">Current Status</th>
+                    <th class="py-3.5 px-4 sm:px-6 text-right whitespace-nowrap min-w-[210px]">Actions</th>
                   </tr>
                 </thead>
                 <tbody id="dash-projects-tbody"></tbody>
@@ -463,7 +469,7 @@
               + Commission New Album
             </a>
           </div>
-          <div id="dash-albums-grid" class="grid grid-cols-1 lg:grid-cols-2 gap-6"></div>
+          <div id="dash-albums-grid" class="grid grid-cols-1 xl:grid-cols-2 gap-6 items-stretch"></div>
         </section>
 
         <!-- ===============================================================

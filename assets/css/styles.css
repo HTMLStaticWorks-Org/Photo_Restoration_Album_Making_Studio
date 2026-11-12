@@ -240,6 +240,21 @@ html.dark .btn-luxury-primary:hover {
     width: 100% !important;
     min-width: 0 !important;
     max-width: 100% !important;
+    white-space: normal !important;
+    height: auto !important;
+    min-height: 3.15rem !important;
+    padding: 0.75rem 1.15rem !important;
+    text-align: center !important;
+    justify-content: center !important;
+    align-items: center !important;
+    line-height: 1.35 !important;
+    font-size: 0.875rem !important;
+  }
+
+  .cta-group > button span,
+  .cta-group > a span {
+    text-align: center !important;
+    white-space: normal !important;
   }
 }
 
@@ -720,11 +735,11 @@ html.dark .social-icon-btn {
 /* ==========================================================================
    FOOTER INTERACTION & HOVER STYLES
    ========================================================================== */
-footer a:not(.social-icon-btn):not(.floating-scroll-btn):not(.back-to-top-btn) {
+footer a:not(.social-icon-btn):not(.back-to-top-btn) {
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-footer a:not(.social-icon-btn):not(.floating-scroll-btn):not(.back-to-top-btn):hover {
+footer a:not(.social-icon-btn):not(.back-to-top-btn):hover {
   color: var(--accent-gold) !important;
 }
 
@@ -777,84 +792,6 @@ a.hover\:text-theme-gold:hover {
   }
 }
 
-/* ==========================================================================
-   UNIVERSAL FLOATING PAGE SCROLL NAVIGATION (Visible in all sections)
-   ========================================================================== */
-.floating-scroll-nav {
-  position: fixed;
-  bottom: 1.75rem;
-  right: 1.75rem;
-  z-index: 999;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.25rem;
-  padding: 0.35rem;
-  border-radius: 9999px;
-  background-color: rgba(248, 245, 239, 0.94);
-  border: 1px solid rgba(197, 164, 109, 0.45);
-  box-shadow: 0 12px 30px -4px rgba(48, 37, 31, 0.25);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
 
-html.dark .floating-scroll-nav {
-  background-color: rgba(26, 20, 16, 0.94);
-  border-color: rgba(197, 164, 109, 0.35);
-  box-shadow: 0 12px 30px -4px rgba(0, 0, 0, 0.65);
-}
-
-[dir="rtl"] .floating-scroll-nav {
-  right: auto;
-  left: 1.75rem;
-}
-
-.floating-scroll-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.35rem;
-  height: 2.35rem;
-  border-radius: 9999px;
-  border: none;
-  background: transparent;
-  color: var(--accent-gold);
-  cursor: pointer;
-  transition: all 0.25s ease;
-}
-
-.floating-scroll-btn:hover {
-  background-color: var(--accent-gold);
-  color: #14110F;
-  transform: scale(1.1);
-  box-shadow: 0 4px 14px rgba(197, 164, 109, 0.4);
-}
-
-.floating-scroll-btn:active {
-  transform: scale(0.95);
-}
-
-.floating-scroll-divider {
-  width: 1.25rem;
-  height: 1px;
-  background-color: rgba(197, 164, 109, 0.3);
-}
-
-@media (max-width: 640px) {
-  .floating-scroll-nav {
-    bottom: 1.25rem;
-    right: 1.25rem;
-    padding: 0.25rem;
-  }
-  [dir="rtl"] .floating-scroll-nav {
-    left: 1.25rem;
-    right: auto;
-  }
-  .floating-scroll-btn {
-    width: 2.1rem;
-    height: 2.1rem;
-  }
-}
 
 

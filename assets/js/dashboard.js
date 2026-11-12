@@ -485,28 +485,28 @@ function renderProjectsTable() {
     .map(
       (p) => `
     <tr class="border-b border-theme hover:bg-black/5 dark:hover:bg-white/5 transition">
-      <td class="p-4">
+      <td class="py-4 px-4 sm:px-6 min-w-[280px]">
         <div class="flex items-center gap-3">
-          <img src="${p.beforeImg}" alt="${p.title}" class="w-12 h-12 rounded-lg object-cover border border-theme-strong shrink-0" />
-          <div>
-            <p class="font-semibold text-theme-primary text-xs sm:text-sm">${p.title}</p>
-            <p class="text-[11px] text-theme-muted truncate max-w-xs">${p.instructions}</p>
+          <img src="${p.beforeImg}" alt="${p.title}" class="w-12 h-12 rounded-lg object-cover border border-theme-strong shrink-0 shadow-sm" />
+          <div class="min-w-0 pr-2">
+            <p class="font-semibold text-theme-primary text-xs sm:text-sm leading-snug break-words">${p.title}</p>
+            <p class="text-[11px] text-theme-muted truncate max-w-[220px] sm:max-w-xs mt-0.5">${p.instructions}</p>
           </div>
         </div>
       </td>
-      <td class="p-4 font-mono-code text-xs font-semibold text-theme-gold">#${p.id}</td>
-      <td class="p-4 text-xs text-theme-secondary whitespace-nowrap">${p.submittedDate}</td>
-      <td class="p-4 text-xs text-theme-primary font-medium">${p.service}</td>
-      <td class="p-4">
-        <span class="px-2.5 py-1 rounded-full text-[11px] font-mono-code font-semibold border ${badgeStyle(p.status)} whitespace-nowrap">
+      <td class="py-4 px-4 font-mono-code text-xs font-semibold text-theme-gold whitespace-nowrap min-w-[110px]">#${p.id}</td>
+      <td class="py-4 px-4 text-xs text-theme-secondary whitespace-nowrap min-w-[120px]">${p.submittedDate}</td>
+      <td class="py-4 px-4 text-xs text-theme-primary font-medium min-w-[180px] leading-snug">${p.service}</td>
+      <td class="py-4 px-4 min-w-[180px] whitespace-nowrap">
+        <span class="inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-mono-code font-semibold border ${badgeStyle(p.status)} whitespace-nowrap">
           ${p.status}
         </span>
       </td>
-      <td class="p-4 text-right whitespace-nowrap space-x-2">
-        <button type="button" data-jump-tab="tracking" data-project-id="${p.id}" class="px-3 py-1.5 rounded-lg border border-theme-strong text-xs font-semibold text-theme-primary hover:border-[#C5A46D]">
+      <td class="py-4 px-4 sm:px-6 text-right whitespace-nowrap min-w-[210px] space-x-2">
+        <button type="button" data-jump-tab="tracking" data-project-id="${p.id}" class="px-3 py-1.5 rounded-lg border border-theme-strong text-xs font-semibold text-theme-primary hover:border-[#C5A46D] transition">
           Track Status
         </button>
-        <button type="button" data-jump-tab="proofs" data-project-id="${p.id}" class="px-3 py-1.5 rounded-lg bg-[#30251F] text-[#F8F5EF] dark:bg-[#C5A46D] dark:text-[#14110F] text-xs font-semibold">
+        <button type="button" data-jump-tab="proofs" data-project-id="${p.id}" class="px-3 py-1.5 rounded-lg bg-[#30251F] text-[#F8F5EF] dark:bg-[#C5A46D] dark:text-[#14110F] text-xs font-semibold hover:opacity-90 transition">
           Inspect Proof
         </button>
       </td>
@@ -712,26 +712,60 @@ function renderAlbumsView() {
   grid.innerHTML = albums
     .map(
       (a) => `
-    <div class="rounded-2xl bg-theme-surface border border-theme-strong overflow-hidden grid grid-cols-1 md:grid-cols-12 shadow-theme-soft">
-      <div class="md:col-span-5">
-        <img src="${a.previewImg}" alt="${a.title}" class="w-full h-56 md:h-full object-cover" />
+    <div class="rounded-2xl bg-theme-surface border border-theme-strong overflow-hidden flex flex-col md:flex-row shadow-theme-soft group hover:border-[#C5A46D] transition-all duration-300">
+      <!-- Album Cover / Spread Image Preview -->
+      <div class="md:w-5/12 relative overflow-hidden bg-black/5 min-h-[200px] max-h-[260px] md:max-h-none shrink-0">
+        <img src="${a.previewImg}" alt="${a.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+        <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/75 backdrop-blur-sm text-[#C5A46D] font-mono-code text-[11px] font-bold border border-[#C5A46D]/30 shadow-sm">
+          #${a.id}
+        </span>
       </div>
-      <div class="md:col-span-7 p-6 flex flex-col justify-between">
+
+      <!-- Album Details & Specifications -->
+      <div class="flex-1 p-5 sm:p-6 flex flex-col justify-between gap-4">
         <div>
-          <div class="flex items-center justify-between gap-2">
-            <span class="font-mono-code text-xs text-theme-gold font-bold">#${a.id}</span>
-            <span class="px-2.5 py-0.5 rounded-full bg-[#C5A46D]/20 text-theme-gold text-[11px] font-mono-code font-semibold">${a.status}</span>
+          <div class="flex items-center justify-between gap-2 mb-1.5">
+            <span class="text-[10px] uppercase font-mono-code text-theme-muted tracking-wider">Atelier Commission</span>
+            <span class="px-2.5 py-0.5 rounded-full ${
+              a.status.includes('Completed')
+                ? 'bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30'
+                : 'bg-[#C5A46D]/20 text-theme-gold border border-[#C5A46D]/40'
+            } text-[11px] font-mono-code font-semibold">
+              ${a.status}
+            </span>
           </div>
-          <h3 class="font-serif-editorial text-2xl font-bold text-theme-primary mt-1">${a.title}</h3>
-          <div class="space-y-1.5 mt-3 text-xs text-theme-secondary">
-            <p><strong>Format:</strong> ${a.type}</p>
-            <p><strong>Cover Specification:</strong> ${a.cover}</p>
-            <p><strong>Paper &amp; Leaves:</strong> ${a.pages}</p>
+
+          <h3 class="font-serif-editorial text-xl sm:text-2xl font-bold text-theme-primary leading-snug">
+            ${a.title}
+          </h3>
+
+          <!-- Specifications Structured Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mt-3.5 pt-3 border-t border-theme/60 text-xs text-theme-secondary">
+            <div class="space-y-0.5">
+              <span class="text-[10px] uppercase font-mono-code text-theme-muted block">Format &amp; Size</span>
+              <p class="font-medium text-theme-primary leading-tight">${a.type}</p>
+            </div>
+            <div class="space-y-0.5">
+              <span class="text-[10px] uppercase font-mono-code text-theme-muted block">Cover Specification</span>
+              <p class="font-medium text-theme-primary leading-tight">${a.cover}</p>
+            </div>
+            <div class="space-y-0.5 sm:col-span-2">
+              <span class="text-[10px] uppercase font-mono-code text-theme-muted block">Paper &amp; Leaves</span>
+              <p class="font-medium text-theme-primary leading-tight">${a.pages}</p>
+            </div>
           </div>
         </div>
-        <div class="pt-4 mt-4 border-t border-theme flex items-center justify-between">
-          <span class="font-serif-editorial text-2xl font-bold text-theme-primary">${a.price}</span>
-          <a href="services.html#albums" class="text-xs font-semibold text-theme-gold hover:underline">Customize Spreads →</a>
+
+        <!-- Footer Price & Action -->
+        <div class="pt-3.5 border-t border-theme flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <span class="text-[10px] uppercase font-mono-code text-theme-muted block leading-none mb-1">Commission Tariff</span>
+            <span class="font-serif-editorial text-2xl font-bold text-theme-primary">${a.price}</span>
+          </div>
+          <a href="services.html#albums" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl border border-theme-strong text-xs font-semibold text-theme-primary hover:border-[#C5A46D] hover:text-theme-gold transition">
+            <span>Customize Spreads</span>
+            <span class="text-theme-gold">→</span>
+          </a>
         </div>
       </div>
     </div>
