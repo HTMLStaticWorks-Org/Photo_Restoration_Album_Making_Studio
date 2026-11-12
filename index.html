@@ -111,43 +111,45 @@
                   alt="Beautifully restored multi-generational family photograph"
                   class="w-full h-full object-cover"
                 />
-                <div class="absolute inset-0 bg-gradient-to-t from-[#1A130F]/80 via-transparent to-transparent"></div>
-                <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between text-[#F8F5EF] p-2">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#1A130F]/90 via-[#1A130F]/30 to-transparent"></div>
+                <div class="absolute bottom-5 sm:bottom-6 left-4 sm:left-6 max-w-[260px] sm:max-w-[280px] lg:max-w-sm text-[#F8F5EF] p-1 sm:p-1.5 z-10">
                   <div>
-                    <span class="px-2.5 py-1 rounded-full text-[11px] font-mono-code uppercase tracking-wider bg-[#C5A46D] text-[#14110F] font-semibold">Archive Plate #MR-1954</span>
-                    <p class="font-serif-editorial text-xl font-semibold mt-1.5">The Chatterjee Family Reunion, Calcutta (1954)</p>
-                    <p class="text-xs text-[#EDE4D6]/85">Torn silver gelatin print • Reconstructed &amp; tonally balanced</p>
+                    <span class="px-2.5 py-0.5 rounded-full text-[10px] sm:text-[11px] font-mono-code uppercase tracking-wider bg-[#C5A46D] text-[#14110F] font-semibold inline-block">Archive Plate #MR-1954</span>
+                    <p class="font-serif-editorial text-lg sm:text-xl font-semibold mt-1 leading-snug">The Chatterjee Family Reunion, Calcutta (1954)</p>
+                    <p class="text-[11px] sm:text-xs text-[#EDE4D6]/85 mt-0.5">Torn silver gelatin print • Reconstructed &amp; tonally balanced</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- Floating Vintage Element 1 (Top Right) -->
-            <div class="hidden sm:block absolute -top-7 -right-5 z-20 w-44 vintage-photo-frame rounded-xl animate-float-slow">
-              <div class="aspect-[4/5] rounded-lg overflow-hidden relative">
-                <img
-                  src="assets/images/dash-1946-saree-original.jpg"
-                  alt="Vintage 1946 sepia studio portrait"
-                  class="w-full h-full object-cover"
-                />
-                <span class="absolute bottom-1.5 left-1.5 right-1.5 bg-[#30251F]/90 text-[#F8F5EF] text-[10px] font-mono-code text-center py-0.5 rounded">Sepia Plate • 1946</span>
+            <!-- Floating Vintage Element 1 (Center-Aligned Sepia Plate - Visible on Mobile & Desktop) -->
+            <div class="block absolute -top-4 sm:-top-6 lg:-top-7 left-1/2 -translate-x-1/2 z-20">
+              <div class="w-24 sm:w-34 lg:w-40 vintage-photo-frame rounded-lg sm:rounded-xl animate-float-slow">
+                <div class="aspect-[4/5] rounded-md sm:rounded-lg overflow-hidden relative">
+                  <img
+                    src="assets/images/dash-1946-saree-original.jpg"
+                    alt="Vintage 1946 sepia studio portrait"
+                    class="w-full h-full object-cover"
+                  />
+                  <span class="absolute bottom-1 sm:bottom-1.5 left-1 sm:left-1.5 right-1 sm:right-1.5 bg-[#30251F]/90 text-[#F8F5EF] text-[8px] sm:text-[10px] font-mono-code text-center py-0.5 rounded whitespace-nowrap">Sepia Plate • 1946</span>
+                </div>
               </div>
             </div>
 
-            <!-- Floating Vintage Element 2 (Bottom Left) -->
-            <div class="hidden sm:flex absolute -bottom-6 -left-6 z-20 items-center gap-3.5 p-3.5 rounded-2xl bg-theme-surface border border-theme-strong shadow-theme-elevated animate-float-reverse max-w-xs">
+            <!-- Floating Vintage Element 2 (Bottom Right Archival Trust Badge - Clear of caption text and all persons) -->
+            <div class="flex relative z-20 mt-3 sm:mt-0 sm:absolute sm:-bottom-5 sm:-right-3 lg:-bottom-6 lg:-right-5 rtl:sm:right-auto rtl:sm:-left-3 rtl:lg:-left-5 items-center gap-2.5 p-2 sm:p-2.5 rounded-xl bg-theme-surface border border-theme-strong shadow-theme-elevated sm:animate-float-reverse max-w-[260px] sm:max-w-[215px] lg:max-w-[225px] mx-auto">
               <img
-                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80"
+                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80"
                 alt="Restored maternal portrait"
-                class="w-14 h-14 rounded-xl object-cover border border-[#C5A46D]"
+                class="w-8 h-8 sm:w-9 sm:h-9 rounded-lg object-cover border border-[#C5A46D] shrink-0"
               />
-              <div>
-                <div class="flex items-center gap-1 text-[#C5A46D] text-xs font-semibold">
-                  <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
-                  <span>Museum Archival Grade</span>
+              <div class="min-w-0">
+                <div class="flex items-center gap-1 text-[#C5A46D] text-[10px] font-semibold leading-none">
+                  <i data-lucide="shield-check" class="w-3 h-3 shrink-0"></i>
+                  <span class="truncate">Museum Archival</span>
                 </div>
-                <p class="text-xs font-semibold text-theme-primary mt-0.5">Zero AI Plastic Skin Artifacts</p>
-                <p class="text-[11px] text-theme-muted">True facial likeness preserved</p>
+                <p class="text-[11px] font-bold text-theme-primary mt-0.5 leading-tight truncate">Zero AI Plastic Skin</p>
+                <p class="text-[9px] text-theme-muted leading-tight truncate">Likeness 100% Preserved</p>
               </div>
             </div>
           </div>
@@ -224,8 +226,8 @@
                 alt="After Restoration — Vibrant, crisp restored photograph"
                 class="w-full h-full object-cover"
               />
-              <span class="absolute top-4 right-4 z-10 px-3.5 py-1.5 rounded-full bg-[#30251F]/90 text-[#C5A46D] border border-[#C5A46D]/40 text-xs font-mono-code uppercase tracking-wider">
-                After • Master Restored
+              <span class="absolute top-3 sm:top-4 right-3 sm:right-4 z-10 inline-flex items-center justify-center h-7 sm:h-8 px-2.5 sm:px-3.5 rounded-full bg-[#30251F]/90 text-[#C5A46D] border border-[#C5A46D]/40 text-[10px] sm:text-xs font-mono-code uppercase tracking-wider whitespace-nowrap shadow-md pointer-events-none">
+                After • <span class="hidden sm:inline">Master </span>Restored
               </span>
 
               <!-- BEFORE LAYER (Damaged, Sepia, Creased, Scratched) -->
@@ -236,8 +238,8 @@
                   alt="Before Restoration — Faded, creased, and scratched vintage photograph"
                   class="w-full h-full object-cover"
                 />
-                <span class="absolute top-4 left-4 z-10 px-3.5 py-1.5 rounded-full bg-black/80 text-white border border-white/20 text-xs font-mono-code uppercase tracking-wider">
-                  Before • Damaged Original
+                <span class="absolute top-3 sm:top-4 left-3 sm:left-4 z-10 inline-flex items-center justify-center h-7 sm:h-8 px-2.5 sm:px-3.5 rounded-full bg-black/85 text-white border border-white/20 text-[10px] sm:text-xs font-mono-code uppercase tracking-wider whitespace-nowrap shadow-md pointer-events-none">
+                  Before • <span class="hidden sm:inline">Damaged </span>Original
                 </span>
               </div>
 
@@ -251,12 +253,12 @@
           </div>
 
           <!-- Right Column: Active Restoration Case Details -->
-          <div class="lg:col-span-4 h-full flex flex-col justify-between bg-theme-surface p-6 sm:p-8 rounded-2xl border border-theme-strong shadow-theme-soft" data-aos="fade-left">
-            <div class="space-y-4">
+          <div class="lg:col-span-4 h-full flex flex-col justify-between bg-theme-surface p-6 sm:p-8 rounded-2xl border border-theme-strong shadow-theme-soft space-y-6" data-aos="fade-left">
+            <div class="space-y-3.5">
               <span id="ba-active-badge" class="inline-block px-3 py-1 rounded-full bg-[#C5A46D]/20 text-theme-gold text-xs font-mono-code font-semibold">
                 Case #01 • 1948 Wedding Plate
               </span>
-              <h3 id="ba-active-title" class="font-serif-editorial text-2xl sm:text-3xl font-bold text-theme-primary">
+              <h3 id="ba-active-title" class="font-serif-editorial text-2xl sm:text-3xl font-bold text-theme-primary leading-tight">
                 Severe Crease &amp; Silver Fading Recovery
               </h3>
               <p id="ba-active-desc" class="text-sm text-theme-secondary leading-relaxed">
@@ -264,7 +266,21 @@
               </p>
             </div>
 
-            <div class="space-y-6 pt-6 mt-6 border-t border-theme">
+            <!-- Archival Conservation Highlights (Fills the vertical space gracefully) -->
+            <div class="grid grid-cols-2 gap-3 py-4 border-y border-theme">
+              <div class="p-3 rounded-xl bg-theme-secondary/70 border border-theme">
+                <span class="text-[10px] font-mono-code uppercase text-theme-muted tracking-wider block">Conservation Time</span>
+                <span class="font-serif-editorial text-lg font-bold text-theme-primary">18 Hours</span>
+                <span class="text-[10px] text-theme-muted block mt-0.5">Hand-pixel mastery</span>
+              </div>
+              <div class="p-3 rounded-xl bg-theme-secondary/70 border border-theme">
+                <span class="text-[10px] font-mono-code uppercase text-theme-muted tracking-wider block">Archival Standard</span>
+                <span class="font-serif-editorial text-lg font-bold text-theme-gold">ISO 18902</span>
+                <span class="text-[10px] text-theme-muted block mt-0.5">Museum rated seal</span>
+              </div>
+            </div>
+
+            <div class="space-y-5">
               <div class="space-y-3 text-xs">
                 <div class="flex items-center justify-between">
                   <span class="text-theme-muted">Optical Scan Resolution</span>
@@ -395,9 +411,9 @@
               </div>
               <div class="img-zoom-wrap rounded-xl overflow-hidden aspect-[16/10] mb-5">
                 <img
-                  src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=80"
+                  src="https://images.unsplash.com/photo-1548142813-c348350df52b?auto=format&fit=crop&w=800&h=500&q=80"
                   alt="Face Enhancement — Fine facial detail recovery"
-                  class="w-full h-full object-cover object-top"
+                  class="w-full h-full object-cover object-center"
                 />
               </div>
               <h3 class="font-serif-editorial text-2xl font-bold text-theme-primary">Face Enhancement</h3>
@@ -420,9 +436,9 @@
               </div>
               <div class="img-zoom-wrap rounded-xl overflow-hidden aspect-[16/10] mb-5">
                 <img
-                  src="https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&w=700&q=80"
+                  src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&h=500&q=80"
                   alt="Background Reconstruction — Classic portrait backdrop restoration"
-                  class="w-full h-full object-cover object-top"
+                  class="w-full h-full object-cover object-center"
                 />
               </div>
               <h3 class="font-serif-editorial text-2xl font-bold text-theme-primary">Background Reconstruction</h3>
@@ -445,9 +461,9 @@
               </div>
               <div class="img-zoom-wrap rounded-xl overflow-hidden aspect-[16/10] mb-5">
                 <img
-                  src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=900&q=80"
+                  src="https://images.unsplash.com/photo-1493863641943-9b68992a8d07?auto=format&fit=crop&w=800&h=500&q=80"
                   alt="Photo Enhancement & Upscaling for large format framing"
-                  class="w-full h-full object-cover object-top"
+                  class="w-full h-full object-cover object-center"
                 />
               </div>
               <h3 class="font-serif-editorial text-2xl font-bold text-theme-primary">Photo Enhancement &amp; Upscaling</h3>
@@ -503,7 +519,7 @@
             <div class="absolute inset-0 bg-gradient-to-t from-[#120E0B] via-[#120E0B]/60 to-transparent"></div>
             <div class="relative z-10">
               <span class="inline-block px-3 py-1 rounded-full bg-[#30251F]/90 border border-[#C5A46D]/40 text-[#C5A46D] text-xs font-mono-code uppercase tracking-wider">Bespoke Bridal Edition</span>
-              <h3 class="font-serif-editorial text-2xl font-bold text-white mt-3">Luxury Wedding<br />Albums</h3>
+              <h3 class="font-serif-editorial text-2xl font-bold text-white mt-3">Luxury Wedding Albums</h3>
               <p class="text-sm text-[#EDE4D6] mt-1.5 leading-relaxed line-clamp-2">
                 24k gold foil monogramming, seamless panoramic layflat spreads, and velvet-lined wooden presentation chests.
               </p>
@@ -730,94 +746,94 @@
           </p>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 xl:gap-8 items-stretch">
 
           <!-- Story 1 -->
-          <div class="rounded-2xl bg-theme-surface border border-theme-strong p-7 flex flex-col justify-between shadow-theme-soft editorial-card" data-aos="fade-up">
+          <div class="rounded-2xl bg-theme-surface border border-theme-strong p-6 xl:p-7 flex flex-col justify-between shadow-theme-soft editorial-card h-full" data-aos="fade-up">
             <div>
-              <div class="flex items-center justify-between mb-5">
-                <div class="flex items-center gap-1 text-[#C5A46D]">
-                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <div class="flex items-center justify-between gap-2 mb-5">
+                <div class="flex items-center gap-0.5 sm:gap-1 text-[#C5A46D] shrink-0">
+                  <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
                 </div>
-                <span class="text-xs font-mono-code text-theme-muted">1947 Partition Portrait</span>
+                <span class="text-[11px] xl:text-xs font-mono-code text-theme-muted whitespace-nowrap text-right shrink-0">1947 Partition Portrait</span>
               </div>
-              <p class="font-serif-editorial italic text-xl text-theme-primary leading-relaxed">
+              <p class="font-serif-editorial italic text-lg xl:text-xl text-theme-primary leading-relaxed">
                 “We only had one torn, water-stained photograph of my Nani’s wedding in Lahore before Partition. When MEMORA revealed the restored portrait at my mother’s 75th birthday, the entire room wept.”
               </p>
             </div>
-            <div class="flex items-center gap-4 pt-6 mt-6 border-t border-theme">
+            <div class="flex items-center gap-3.5 sm:gap-4 pt-5 mt-5 xl:pt-6 xl:mt-6 border-t border-theme">
               <img
                 src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=250&q=80"
                 alt="Ananya Singhania"
-                class="w-12 h-12 rounded-full object-cover border border-[#C5A46D]"
+                class="w-11 h-11 xl:w-12 xl:h-12 rounded-full object-cover border border-[#C5A46D] shrink-0"
               />
-              <div>
-                <h4 class="text-sm font-bold text-theme-primary">Ananya Singhania</h4>
-                <p class="text-xs text-theme-muted">New Delhi • Complex Restoration + Heritage Frame</p>
+              <div class="min-w-0">
+                <h4 class="text-sm font-bold text-theme-primary truncate">Ananya Singhania</h4>
+                <p class="text-xs text-theme-muted truncate">New Delhi • Complex Restoration + Heritage Frame</p>
               </div>
             </div>
           </div>
 
           <!-- Story 2 -->
-          <div class="rounded-2xl bg-[#30251F] text-[#F8F5EF] border border-[#C5A46D]/40 p-7 flex flex-col justify-between shadow-theme-elevated editorial-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="rounded-2xl bg-[#30251F] text-[#F8F5EF] border border-[#C5A46D]/40 p-6 xl:p-7 flex flex-col justify-between shadow-theme-elevated editorial-card h-full" data-aos="fade-up" data-aos-delay="100">
             <div>
-              <div class="flex items-center justify-between mb-5">
-                <div class="flex items-center gap-1 text-[#C5A46D]">
-                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <div class="flex items-center justify-between gap-2 mb-5">
+                <div class="flex items-center gap-0.5 sm:gap-1 text-[#C5A46D] shrink-0">
+                  <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
                 </div>
-                <span class="text-xs font-mono-code text-[#C5A46D]">Ancestral Leather Volume</span>
+                <span class="text-[11px] xl:text-xs font-mono-code text-[#C5A46D] whitespace-nowrap text-right shrink-0">Ancestral Leather Volume</span>
               </div>
-              <p class="font-serif-editorial italic text-xl text-[#F8F5EF] leading-relaxed">
+              <p class="font-serif-editorial italic text-lg xl:text-xl text-[#F8F5EF] leading-relaxed">
                 “They digitized 140 fragile glass-plate negatives from our ancestral home in Cochin and bound them into an Italian leather Heritage Album with Malayalam and English annotations. Pure museum artistry.”
               </p>
             </div>
-            <div class="flex items-center gap-4 pt-6 mt-6 border-t border-white/15">
+            <div class="flex items-center gap-3.5 sm:gap-4 pt-5 mt-5 xl:pt-6 xl:mt-6 border-t border-white/15">
               <img
                 src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=250&q=80"
                 alt="Dr. Rajeshwar Nair"
-                class="w-12 h-12 rounded-full object-cover border border-[#C5A46D]"
+                class="w-11 h-11 xl:w-12 xl:h-12 rounded-full object-cover border border-[#C5A46D] shrink-0"
               />
-              <div>
-                <h4 class="text-sm font-bold text-white">Dr. Rajeshwar Nair</h4>
-                <p class="text-xs text-[#D5C7B8]">Kochi • Custom Heritage Album Commission</p>
+              <div class="min-w-0">
+                <h4 class="text-sm font-bold text-white truncate">Dr. Rajeshwar Nair</h4>
+                <p class="text-xs text-[#D5C7B8] truncate">Kochi • Custom Heritage Album Commission</p>
               </div>
             </div>
           </div>
 
           <!-- Story 3 -->
-          <div class="rounded-2xl bg-theme-surface border border-theme-strong p-7 flex flex-col justify-between shadow-theme-soft editorial-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="rounded-2xl bg-theme-surface border border-theme-strong p-6 xl:p-7 flex flex-col justify-between shadow-theme-soft editorial-card h-full" data-aos="fade-up" data-aos-delay="200">
             <div>
-              <div class="flex items-center justify-between mb-5">
-                <div class="flex items-center gap-1 text-[#C5A46D]">
-                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <div class="flex items-center justify-between gap-2 mb-5">
+                <div class="flex items-center gap-0.5 sm:gap-1 text-[#C5A46D] shrink-0">
+                  <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
                 </div>
-                <span class="text-xs font-mono-code text-theme-muted">Forensic Colorization</span>
+                <span class="text-[11px] xl:text-xs font-mono-code text-theme-muted whitespace-nowrap text-right shrink-0">Forensic Colorization</span>
               </div>
-              <p class="font-serif-editorial italic text-xl text-theme-primary leading-relaxed">
+              <p class="font-serif-editorial italic text-lg xl:text-xl text-theme-primary leading-relaxed">
                 “I had tried three online AI apps before finding MEMORA—they all made my late father look like a stranger. MEMORA’s human artists preserved his exact smile and matched his Air Force uniform colors to perfection.”
               </p>
             </div>
-            <div class="flex items-center gap-4 pt-6 mt-6 border-t border-theme">
+            <div class="flex items-center gap-3.5 sm:gap-4 pt-5 mt-5 xl:pt-6 xl:mt-6 border-t border-theme">
               <img
                 src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=250&q=80"
                 alt="Meera Deshmukh"
-                class="w-12 h-12 rounded-full object-cover border border-[#C5A46D]"
+                class="w-11 h-11 xl:w-12 xl:h-12 rounded-full object-cover border border-[#C5A46D] shrink-0"
               />
-              <div>
-                <h4 class="text-sm font-bold text-theme-primary">Meera Deshmukh</h4>
-                <p class="text-xs text-theme-muted">Pune • B&amp;W Colorization &amp; Upscaling</p>
+              <div class="min-w-0">
+                <h4 class="text-sm font-bold text-theme-primary truncate">Meera Deshmukh</h4>
+                <p class="text-xs text-theme-muted truncate">Pune • B&amp;W Colorization &amp; Upscaling</p>
               </div>
             </div>
           </div>

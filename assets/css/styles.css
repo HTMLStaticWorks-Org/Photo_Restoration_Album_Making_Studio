@@ -53,7 +53,7 @@ html.dark {
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow-x: clip;
   background-color: var(--bg-primary);
   color: var(--text-primary);
   font-family: var(--font-sans);
@@ -62,7 +62,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  overflow-x: clip;
   background-color: var(--bg-primary);
   color: var(--text-primary);
   transition: background-color 0.35s ease, color 0.35s ease;
@@ -483,6 +483,13 @@ html[dir="rtl"] .rtl-flip-icon {
 }
 
 /* Dashboard Adaptive Sidebar & Tabs */
+#dash-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+
 .dash-sidebar {
   background-color: var(--bg-primary);
   color: var(--text-primary);
@@ -708,6 +715,146 @@ html.dark .social-icon-btn {
 .back-to-top-btn:hover svg,
 .back-to-top-btn:hover i {
   transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   FOOTER INTERACTION & HOVER STYLES
+   ========================================================================== */
+footer a:not(.social-icon-btn):not(.floating-scroll-btn):not(.back-to-top-btn) {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+footer a:not(.social-icon-btn):not(.floating-scroll-btn):not(.back-to-top-btn):hover {
+  color: var(--accent-gold) !important;
+}
+
+/* Navigation & Services column links: subtle elegant indent & warm gold glow */
+footer ul li a {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+footer ul li a:hover {
+  transform: translateX(5px);
+  color: var(--accent-gold) !important;
+  text-shadow: 0 0 10px rgba(197, 164, 109, 0.45);
+}
+
+[dir="rtl"] footer ul li a:hover {
+  transform: translateX(-5px);
+}
+
+/* Contact information links (Phone & Mail) */
+footer a[href^="tel:"]:hover,
+footer a[href^="mailto:"]:hover {
+  color: var(--accent-gold) !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Legal links in bottom copyright row */
+footer .flex.flex-wrap a:hover {
+  color: var(--accent-gold) !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Explicit class-based fallback matching the Tailwind hover syntax */
+.hover\:text-theme-gold:hover,
+a.hover\:text-theme-gold:hover {
+  color: var(--accent-gold) !important;
+}
+
+/* Tablet Landscape 1024px Footer Alignment & Fluid Spacing */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  footer .grid {
+    gap: 1.5rem !important;
+  }
+  footer h4 {
+    white-space: nowrap !important;
+    font-size: 1.05rem !important;
+  }
+}
+
+/* ==========================================================================
+   UNIVERSAL FLOATING PAGE SCROLL NAVIGATION (Visible in all sections)
+   ========================================================================== */
+.floating-scroll-nav {
+  position: fixed;
+  bottom: 1.75rem;
+  right: 1.75rem;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.35rem;
+  border-radius: 9999px;
+  background-color: rgba(248, 245, 239, 0.94);
+  border: 1px solid rgba(197, 164, 109, 0.45);
+  box-shadow: 0 12px 30px -4px rgba(48, 37, 31, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html.dark .floating-scroll-nav {
+  background-color: rgba(26, 20, 16, 0.94);
+  border-color: rgba(197, 164, 109, 0.35);
+  box-shadow: 0 12px 30px -4px rgba(0, 0, 0, 0.65);
+}
+
+[dir="rtl"] .floating-scroll-nav {
+  right: auto;
+  left: 1.75rem;
+}
+
+.floating-scroll-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  border-radius: 9999px;
+  border: none;
+  background: transparent;
+  color: var(--accent-gold);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.floating-scroll-btn:hover {
+  background-color: var(--accent-gold);
+  color: #14110F;
+  transform: scale(1.1);
+  box-shadow: 0 4px 14px rgba(197, 164, 109, 0.4);
+}
+
+.floating-scroll-btn:active {
+  transform: scale(0.95);
+}
+
+.floating-scroll-divider {
+  width: 1.25rem;
+  height: 1px;
+  background-color: rgba(197, 164, 109, 0.3);
+}
+
+@media (max-width: 640px) {
+  .floating-scroll-nav {
+    bottom: 1.25rem;
+    right: 1.25rem;
+    padding: 0.25rem;
+  }
+  [dir="rtl"] .floating-scroll-nav {
+    left: 1.25rem;
+    right: auto;
+  }
+  .floating-scroll-btn {
+    width: 2.1rem;
+    height: 2.1rem;
+  }
 }
 
 

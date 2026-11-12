@@ -119,7 +119,7 @@ function initSharedHeaderFooter() {
 
           <!-- Utility & Auth Controls -->
           <div class="flex items-center gap-2 sm:gap-2.5 shrink-0">
-            <!-- Desktop RTL & Theme Toggles (Visible on desktop >= 1280px) -->
+            <!-- Desktop RTL & Theme Toggles + Sign Up CTA (Visible on desktop >= 1280px) -->
             <div class="hidden xl:flex items-center gap-2">
               <!-- RTL Toggle (Left-Right Arrow Icon) -->
               <button type="button" data-action="toggle-rtl" class="w-10 h-10 rounded-full border border-theme-strong flex items-center justify-center text-theme-primary hover:border-[#C5A46D] hover:text-theme-gold transition" aria-label="Toggle LTR/RTL layout direction" title="Toggle LTR / RTL Direction">
@@ -130,6 +130,11 @@ function initSharedHeaderFooter() {
               <button type="button" data-action="toggle-theme" class="w-10 h-10 rounded-full border border-theme-strong flex items-center justify-center text-theme-primary hover:border-[#C5A46D] hover:text-theme-gold transition" aria-label="Toggle Light/Dark Mode" title="Toggle Light/Dark Theme">
                 <i data-lucide="${isDark ? 'sun' : 'moon'}" class="w-4 h-4"></i>
               </button>
+
+              <!-- Sign Up CTA Button -->
+              <a href="signup.html" class="btn-luxury-primary !py-2 !px-5 !min-h-0 !h-10 text-xs font-semibold rounded-full uppercase tracking-wider ml-1 shadow-sm">
+                <span>Sign Up</span>
+              </a>
             </div>
 
             <!-- Mobile Hamburger Trigger (Visible on 1028px, tablet, and mobile views) -->
@@ -230,12 +235,12 @@ function initSharedHeaderFooter() {
 
       <footer class="bg-[#F8F5EF] dark:bg-[#1A1410] text-[#30251F] dark:text-[#F5EFE6] border-t border-theme-strong pt-16 pb-10 transition-colors duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <!-- Main Footer Columns -->
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-theme">
+          <!-- Main Footer Columns (Balanced 4-Column Layout at 1024px and Desktop) -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-6 xl:gap-10 pb-12 border-b border-theme items-start">
             <!-- Col 1: Brand Identity -->
-            <div class="lg:col-span-4 space-y-4">
+            <div class="lg:col-span-3 xl:col-span-4 space-y-4">
               <a href="index.html" class="inline-flex items-center gap-3 group focus:outline-none" aria-label="MEMORA STUDIO Home">
-                <div class="w-11 h-11 rounded-xl bg-[#30251F] dark:bg-[#C5A46D] text-[#F8F5EF] dark:text-[#14110F] flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+                <div class="w-11 h-11 rounded-xl bg-[#30251F] dark:bg-[#C5A46D] text-[#F8F5EF] dark:text-[#14110F] flex items-center justify-center shadow-md group-hover:scale-105 transition-transform shrink-0">
                   <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
                     <rect x="3" y="4" width="18" height="16" rx="2"/>
                     <circle cx="8.5" cy="9.5" r="1.5"/>
@@ -248,7 +253,7 @@ function initSharedHeaderFooter() {
                   <span class="text-[10px] tracking-[0.28em] uppercase text-theme-gold font-semibold mt-0.5">ARCHIVE &amp; ATELIER</span>
                 </div>
               </a>
-              <p class="text-sm text-theme-secondary leading-relaxed pr-2">
+              <p class="text-sm text-theme-secondary leading-relaxed pr-0 xl:pr-4">
                 Museum-grade photograph restoration, forensic colorization, and handcrafted Italian-leather heirloom albums. Every crease repaired by master digital conservationists.
               </p>
               <!-- Original Social Icons with Dedicated Brand Colors & Hover Effects -->
@@ -279,52 +284,59 @@ function initSharedHeaderFooter() {
             </div>
 
             <!-- Col 2: Quick Navigation -->
-            <div class="lg:col-span-2 space-y-3">
-              <h4 class="font-serif-editorial text-lg font-semibold text-theme-gold tracking-wide">Navigation</h4>
+            <div class="lg:col-span-3 xl:col-span-2 space-y-3">
+              <h4 class="font-serif-editorial text-[17px] xl:text-lg font-semibold text-theme-gold tracking-wide whitespace-nowrap">Navigation</h4>
               <ul class="space-y-2 text-sm text-theme-secondary">
-                <li><a href="index.html" class="hover:text-theme-gold transition">Home 1 (Main)</a></li>
-                <li><a href="home-2.html" class="hover:text-theme-gold transition">Home 2 (Editorial)</a></li>
-                <li><a href="about.html" class="hover:text-theme-gold transition">About Our Atelier</a></li>
-                <li><a href="services.html" class="hover:text-theme-gold transition">Services &amp; Craft</a></li>
-                <li><a href="pricing.html" class="hover:text-theme-gold transition">Packages &amp; Pricing</a></li>
-                <li><a href="gallery.html" class="hover:text-theme-gold transition">Restoration Gallery</a></li>
-                <li><a href="contact.html" class="hover:text-theme-gold transition">Contact &amp; Booking</a></li>
-                <li><a href="dashboard.html" class="hover:text-theme-gold transition font-medium text-theme-gold">Customer Dashboard</a></li>
+                <li><a href="index.html" class="hover:text-theme-gold transition whitespace-nowrap">Home 1 (Main)</a></li>
+                <li><a href="home-2.html" class="hover:text-theme-gold transition whitespace-nowrap">Home 2 (Editorial)</a></li>
+                <li><a href="about.html" class="hover:text-theme-gold transition whitespace-nowrap">About Our Atelier</a></li>
+                <li><a href="services.html" class="hover:text-theme-gold transition whitespace-nowrap">Services &amp; Craft</a></li>
+                <li><a href="pricing.html" class="hover:text-theme-gold transition whitespace-nowrap">Packages &amp; Pricing</a></li>
+                <li><a href="gallery.html" class="hover:text-theme-gold transition whitespace-nowrap">Restoration Gallery</a></li>
+                <li><a href="contact.html" class="hover:text-theme-gold transition whitespace-nowrap">Contact &amp; Booking</a></li>
+                <li><a href="dashboard.html" class="hover:text-theme-gold transition font-medium text-theme-gold whitespace-nowrap">Customer Dashboard</a></li>
               </ul>
             </div>
 
             <!-- Col 3: Restoration Services -->
-            <div class="lg:col-span-3 space-y-3">
-              <h4 class="font-serif-editorial text-lg font-semibold text-theme-gold tracking-wide">Restoration Services</h4>
+            <div class="lg:col-span-3 xl:col-span-3 space-y-3">
+              <h4 class="font-serif-editorial text-[17px] xl:text-lg font-semibold text-theme-gold tracking-wide whitespace-nowrap">Restoration Services</h4>
               <ul class="space-y-2 text-sm text-theme-secondary">
-                <li><a href="services.html#restoration" class="hover:text-theme-gold transition">Vintage &amp; Torn Photo Repair</a></li>
-                <li><a href="services.html#colorization" class="hover:text-theme-gold transition">Forensic B&amp;W Colorization</a></li>
-                <li><a href="services.html#enhancement" class="hover:text-theme-gold transition">Facial Reconstruction &amp; Clarity</a></li>
-                <li><a href="services.html#damage" class="hover:text-theme-gold transition">Water, Mold &amp; Fire Recovery</a></li>
-                <li><a href="services.html#albums" class="hover:text-theme-gold transition">Bespoke Layflat Wedding Albums</a></li>
-                <li><a href="services.html#albums" class="hover:text-theme-gold transition">Archival Family Heritage Books</a></li>
+                <li><a href="services.html#restoration" class="hover:text-theme-gold transition whitespace-nowrap">Vintage &amp; Torn Photo Repair</a></li>
+                <li><a href="services.html#colorization" class="hover:text-theme-gold transition whitespace-nowrap">Forensic B&amp;W Colorization</a></li>
+                <li><a href="services.html#enhancement" class="hover:text-theme-gold transition whitespace-nowrap">Facial Reconstruction &amp; Clarity</a></li>
+                <li><a href="services.html#damage" class="hover:text-theme-gold transition whitespace-nowrap">Water, Mold &amp; Fire Recovery</a></li>
+                <li><a href="services.html#albums" class="hover:text-theme-gold transition whitespace-nowrap">Bespoke Layflat Wedding Albums</a></li>
+                <li><a href="services.html#albums" class="hover:text-theme-gold transition whitespace-nowrap">Archival Family Heritage Books</a></li>
               </ul>
             </div>
 
             <!-- Col 4: Studio Contact -->
-            <div class="lg:col-span-3 space-y-3">
-              <h4 class="font-serif-editorial text-lg font-semibold text-theme-gold tracking-wide">Flagship Conservation Studio</h4>
+            <div class="lg:col-span-3 xl:col-span-3 space-y-3">
+              <h4 class="font-serif-editorial text-[17px] xl:text-lg font-semibold text-theme-gold tracking-wide whitespace-nowrap">Flagship Conservation Studio</h4>
               <ul class="space-y-3 text-sm text-theme-secondary">
                 <li class="flex items-start gap-2.5">
                   <i data-lucide="map-pin" class="w-4 h-4 text-theme-gold shrink-0 mt-1"></i>
-                  <span>Suite 402, Heritage Art District, Kala Ghoda, Fort, Mumbai 400001, India</span>
+                  <span class="leading-snug">Suite 402, Heritage Art District, Kala Ghoda, Fort, Mumbai 400001, India</span>
                 </li>
-                <li class="flex items-center gap-2.5">
-                  <i data-lucide="phone" class="w-4 h-4 text-theme-gold shrink-0"></i>
-                  <a href="tel:+912267894321" class="hover:text-theme-gold transition">+91 22 6789 4321 / +91 98201 54321</a>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="phone" class="w-4 h-4 text-theme-gold shrink-0 mt-0.5"></i>
+                  <div class="flex flex-col xl:flex-row xl:items-center gap-0.5 xl:gap-1.5 leading-snug">
+                    <a href="tel:+912267894321" class="hover:text-theme-gold transition whitespace-nowrap">+91 22 6789 4321</a>
+                    <span class="text-theme-muted hidden xl:inline">/</span>
+                    <a href="tel:+919820154321" class="hover:text-theme-gold transition whitespace-nowrap">+91 98201 54321</a>
+                  </div>
                 </li>
                 <li class="flex items-center gap-2.5">
                   <i data-lucide="mail" class="w-4 h-4 text-theme-gold shrink-0"></i>
-                  <a href="mailto:concierge@memorastudio.in" class="hover:text-theme-gold transition">concierge@memorastudio.in</a>
+                  <a href="mailto:concierge@memorastudio.in" class="hover:text-theme-gold transition whitespace-nowrap break-all sm:break-normal">concierge@memorastudio.in</a>
                 </li>
-                <li class="flex items-center gap-2.5">
-                  <i data-lucide="clock" class="w-4 h-4 text-theme-gold shrink-0"></i>
-                  <span>Mon – Sat: 10:00 AM – 7:30 PM IST</span>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="clock" class="w-4 h-4 text-theme-gold shrink-0 mt-0.5"></i>
+                  <div class="flex flex-col xl:flex-row xl:items-center gap-0.5 xl:gap-1.5 leading-snug">
+                    <span class="whitespace-nowrap font-medium text-theme-primary">Mon – Sat:</span>
+                    <span class="whitespace-nowrap">10:00 AM – 7:30 PM IST</span>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -332,16 +344,16 @@ function initSharedHeaderFooter() {
 
           <!-- Bottom Copyright, Legal & Back-To-Top -->
           <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-5 text-xs text-theme-muted">
-            <p>© ${new Date().getFullYear()} MEMORA STUDIO Pvt. Ltd. All Rights Reserved. Crafted with Archival Precision.</p>
+            <p class="text-center md:text-left">© ${new Date().getFullYear()} MEMORA STUDIO Pvt. Ltd. All Rights Reserved. Crafted with Archival Precision.</p>
             
-            <div class="flex flex-wrap items-center gap-5">
-              <a href="about.html" class="hover:text-theme-gold transition">Privacy Vault Policy</a>
-              <a href="pricing.html" class="hover:text-theme-gold transition">Terms &amp; Archival Guarantee</a>
-              <a href="dashboard.html" class="hover:text-theme-gold transition">Track Order Status</a>
+            <div class="flex flex-wrap items-center justify-center md:justify-start gap-5">
+              <a href="about.html" class="hover:text-theme-gold transition whitespace-nowrap">Privacy Vault Policy</a>
+              <a href="pricing.html" class="hover:text-theme-gold transition whitespace-nowrap">Terms &amp; Archival Guarantee</a>
+              <a href="dashboard.html" class="hover:text-theme-gold transition whitespace-nowrap">Track Order Status</a>
             </div>
 
             <!-- Back to Top Arrow Button (Icon Only) -->
-            <button type="button" data-action="back-to-top" class="back-to-top-btn" aria-label="Scroll back to top of page" title="Back to Top">
+            <button type="button" data-action="back-to-top" class="back-to-top-btn shrink-0" aria-label="Scroll back to top of page" title="Back to Top">
               <i data-lucide="arrow-up" class="w-4 h-4"></i>
             </button>
           </div>

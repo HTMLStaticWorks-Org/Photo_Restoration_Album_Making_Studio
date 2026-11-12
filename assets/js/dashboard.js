@@ -216,7 +216,11 @@ function initSidebarNavigation() {
       }, 60);
     }
 
-    if (mobileSidebar && window.innerWidth < 1024) {
+    // Reset scroll position of main workspace container
+    const mainEl = document.querySelector('main');
+    if (mainEl) mainEl.scrollTop = 0;
+
+    if (mobileSidebar && window.innerWidth < 1280) {
       mobileSidebar.classList.add('hidden');
       if (mobileBackdrop) mobileBackdrop.classList.add('hidden');
     }
@@ -563,26 +567,30 @@ function renderStatusTrackingView() {
     </div>
 
     <!-- 7-Stage Connected Pipeline -->
-    <div class="grid grid-cols-1 md:grid-cols-7 gap-3">
+    <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-2 sm:gap-2.5 lg:gap-3 items-stretch">
       ${SEVEN_STAGES.map((stageName, idx) => {
         const isDone = idx < stageIdx;
         const isCurrent = idx === stageIdx;
         return `
-          <div class="rounded-xl p-4 border transition ${
+          <div class="rounded-xl p-2.5 sm:p-3 xl:p-4 border transition h-full flex flex-col justify-between min-w-0 ${
             isCurrent
               ? 'bg-[#30251F] text-[#F8F5EF] border-[#C5A46D] shadow-lg'
               : isDone
               ? 'bg-emerald-500/10 border-emerald-500/30 text-theme-primary'
               : 'bg-theme-surface border-theme text-theme-muted opacity-70'
           }">
-            <div class="flex items-center justify-between mb-2">
-              <span class="font-mono-code text-xs font-bold ${isCurrent ? 'text-[#C5A46D]' : ''}">0${idx + 1}</span>
-              <span class="text-xs">${isDone ? '✓' : isCurrent ? '●' : '○'}</span>
+            <div class="flex items-center justify-between mb-1.5 sm:mb-2 shrink-0">
+              <span class="font-mono-code text-[11px] sm:text-xs font-bold ${isCurrent ? 'text-[#C5A46D]' : ''}">0${idx + 1}</span>
+              <span class="text-xs shrink-0">${isDone ? '✓' : isCurrent ? '●' : '○'}</span>
             </div>
-            <p class="text-xs font-bold leading-snug">${stageName}</p>
-            <p class="text-[10px] mt-1 opacity-80">${
-              isDone ? 'Verified' : isCurrent ? 'Active Stage' : 'Queued'
-            }</p>
+            <div class="flex-1 flex items-center my-1">
+              <p class="text-[11px] sm:text-xs font-bold leading-snug break-words">${stageName}</p>
+            </div>
+            <div class="mt-2 pt-1 border-t border-black/5 dark:border-white/10 shrink-0">
+              <span class="text-[10px] block opacity-80">${
+                isDone ? 'Verified' : isCurrent ? 'Active Stage' : 'Queued'
+              }</span>
+            </div>
           </div>
         `;
       }).join('')}
