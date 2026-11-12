@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <title>MEMORA STUDIO — Home 2 | Editorial Heritage &amp; Album Monograph</title>
+  <meta name="description" content="Alternative creative editorial homepage for MEMORA STUDIO. Explore our interactive memory timeline, featured restoration case studies, and bespoke bookbindery." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            ivory: '#F8F5EF',
+            cream: '#EDE4D6',
+            mutedbrown: '#8B6F58',
+            espresso: '#30251F',
+            gold: '#C5A46D',
+            charcoal: '#252525'
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Custom Studio Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="bg-theme-primary text-theme-primary antialiased selection:bg-[#C5A46D] selection:text-[#14110F]">
+
+  <!-- Reusable Sticky Header -->
+  <div id="site-header"></div>
+
+  <!-- MAIN CONTENT: EXACTLY 7 SECTIONS FOR HOME 2 -->
+  <main>
+
+    <!-- ===================================================================
+         SECTION 1: SPLIT-SCREEN CINEMATIC HERO WITH VINTAGE PHOTO COLLAGE
+         =================================================================== -->
+    <section id="h2-hero" class="relative border-b border-theme overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-stretch">
+
+          <!-- Left Architectural Editorial Panel -->
+          <div class="lg:col-span-5 flex flex-col justify-between bg-[#251D18] text-[#F8F5EF] rounded-3xl p-8 sm:p-11 border border-[#C5A46D]/35 shadow-2xl" data-aos="fade-right">
+            <div class="space-y-6">
+              <div class="flex items-center justify-between border-b border-white/15 pb-4">
+                <span class="font-mono-code text-xs uppercase tracking-[0.22em] text-[#C5A46D]">CURATED EDITION N° 02</span>
+                <span class="text-xs text-[#D5C7B8]">MUMBAI • LONDON • NEW YORK</span>
+              </div>
+
+              <h1 class="font-serif-editorial text-4xl sm:text-5xl font-bold leading-[1.1] text-white">
+                Where Faded Negatives Become <span class="italic font-normal text-[#C5A46D]">Living</span> Fine Art.
+              </h1>
+
+              <p class="text-sm sm:text-base text-[#D5C7B8] leading-relaxed">
+                An editorial house devoted to forensic photograph conservation and museum-bound family monographs. We treat every heirloom print with the reverence of a national gallery masterpiece.
+              </p>
+            </div>
+
+            <div class="pt-8 mt-8 border-t border-white/15 space-y-5">
+              <div class="cta-group">
+                <button type="button" data-open-upload-modal data-package-name="Curatorial Photo Conservation" class="btn-gold">
+                  <i data-lucide="camera" class="w-4 h-4"></i>
+                  <span>Start Conservation</span>
+                </button>
+                <a href="gallery.html" class="btn-luxury-outline text-[#F8F5EF] border-[#C5A46D]/50 hover:bg-[#C5A46D]/15">
+                  <span>View Exhibition</span>
+                </a>
+              </div>
+              <div class="flex items-center justify-between text-xs text-[#A6907C] font-mono-code">
+                <span>ISO 18902 ARCHIVAL STANDARD</span>
+                <span>100% HAND-RETOUCHED</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Asymmetric Vintage Photo Collage -->
+          <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-12 gap-5 items-center" data-aos="fade-left" data-aos-delay="100">
+            <!-- Collage Primary Tall Plate -->
+            <div class="sm:col-span-7 vintage-photo-frame rounded-2xl">
+              <div class="aspect-[4/5] rounded-xl overflow-hidden relative">
+                <img
+                  src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=900&q=85"
+                  alt="Restored fine-art heritage portrait"
+                  class="w-full h-full object-cover"
+                />
+                <div class="absolute bottom-3 left-3 right-3 bg-[#14110F]/85 backdrop-blur-md p-3 rounded-lg border border-[#C5A46D]/30">
+                  <p class="font-mono-code text-[10px] text-[#C5A46D] uppercase tracking-widest">PLATE I • COLORIZED SILVER PRINT</p>
+                  <p class="font-serif-editorial text-lg font-semibold text-white">Maharani’s Studio Sitting, 1951</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Collage Right Stacked Duo -->
+            <div class="sm:col-span-5 space-y-5">
+              <div class="vintage-photo-frame rounded-2xl">
+                <div class="aspect-[4/3.4] rounded-xl overflow-hidden relative">
+                  <img
+                    src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=700&q=80"
+                    alt="Vintage bridal couple photograph restored"
+                    class="w-full h-full object-cover"
+                  />
+                  <span class="absolute top-2.5 right-2.5 px-2.5 py-0.5 rounded bg-[#30251F]/90 text-[#C5A46D] text-[10px] font-mono-code">1964 • BRIDAL</span>
+                </div>
+              </div>
+
+              <div class="vintage-photo-frame rounded-2xl">
+                <div class="aspect-[4/3.4] rounded-xl overflow-hidden relative">
+                  <img
+                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=700&q=80"
+                    alt="Restored vintage maternal heirloom portrait"
+                    class="w-full h-full object-cover"
+                  />
+                  <span class="absolute top-2.5 right-2.5 px-2.5 py-0.5 rounded bg-[#30251F]/90 text-[#C5A46D] text-[10px] font-mono-code">1972 • PORTRAIT</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 2: INTERACTIVE MEMORY TIMELINE (DECADE-BY-DECADE)
+         =================================================================== -->
+    <section id="memory-timeline" class="py-20 lg:py-28 bg-theme-secondary border-b border-theme">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12" data-aos="fade-up">
+          <div>
+            <span class="text-xs font-mono-code uppercase tracking-[0.25em] text-theme-gold font-semibold block mb-2">Chronicle of Photographic Mediums</span>
+            <h2 class="font-serif-editorial text-3xl sm:text-4xl lg:text-5xl font-bold text-theme-primary">
+              Interactive Memory Timeline: 1920s to 1990s
+            </h2>
+          </div>
+          <!-- Era Filter Buttons -->
+          <div class="flex flex-wrap gap-2" id="decade-tabs">
+            <button type="button" data-decade-btn="1920s" class="px-4 py-2 rounded-full text-xs font-mono-code font-semibold bg-[#30251F] text-[#F8F5EF] border border-[#C5A46D]">1920s Glass Plates</button>
+            <button type="button" data-decade-btn="1950s" class="px-4 py-2 rounded-full text-xs font-mono-code font-semibold bg-theme-surface text-theme-primary border border-theme-strong">1950s Silver Gelatin</button>
+            <button type="button" data-decade-btn="1970s" class="px-4 py-2 rounded-full text-xs font-mono-code font-semibold bg-theme-surface text-theme-primary border border-theme-strong">1970s Kodachrome</button>
+            <button type="button" data-decade-btn="1990s" class="px-4 py-2 rounded-full text-xs font-mono-code font-semibold bg-theme-surface text-theme-primary border border-theme-strong">1990s Color Negatives</button>
+          </div>
+        </div>
+
+        <!-- 4 Era Cards Grid (Highlighting active decade) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <!-- 1920s -->
+          <div data-decade-card="1920s" class="rounded-2xl bg-theme-surface border-2 border-[#C5A46D] p-5 flex flex-col justify-between shadow-theme-elevated transition-all">
+            <div>
+              <div class="flex items-center justify-between text-xs font-mono-code text-theme-gold mb-3">
+                <span>1920 – 1939</span>
+                <span>SILVER BROMIDE</span>
+              </div>
+              <div class="aspect-[4/4.2] rounded-xl overflow-hidden mb-4 relative">
+                <img
+                  src="https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=650&q=80"
+                  alt="1920s Restored Sepia Glass Plate Portrait"
+                  class="w-full h-full object-cover"
+                />
+                <span class="absolute bottom-2 left-2 px-2.5 py-0.5 rounded bg-black/75 text-[#C5A46D] text-[10px] font-mono-code">Restored from Cracked Glass</span>
+              </div>
+              <h3 class="font-serif-editorial text-2xl font-bold text-theme-primary min-h-[3.8rem] flex items-start">
+                Early Studio<br>Portraits
+              </h3>
+              <p class="text-xs text-theme-secondary mt-1.5 leading-relaxed">
+                Delicate silver mirroring, edge flaking, and chemical fogging meticulously neutralized without losing period velvet tone.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-theme text-[11px] font-mono-code text-theme-muted">
+              Avg. Conservation: 24 Hours
+            </div>
+          </div>
+
+          <!-- 1950s -->
+          <div data-decade-card="1950s" class="rounded-2xl bg-theme-surface border border-theme-strong p-5 flex flex-col justify-between shadow-theme-soft transition-all">
+            <div>
+              <div class="flex items-center justify-between text-xs font-mono-code text-theme-gold mb-3">
+                <span>1940 – 1959</span>
+                <span>POST-INDEPENDENCE ERA</span>
+              </div>
+              <div class="aspect-[4/4.2] rounded-xl overflow-hidden mb-4 relative">
+                <img
+                  src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=650&q=80"
+                  alt="1950s Restored & Colorized Portrait"
+                  class="w-full h-full object-cover"
+                />
+                <span class="absolute bottom-2 left-2 px-2.5 py-0.5 rounded bg-black/75 text-[#C5A46D] text-[10px] font-mono-code">Monochrome → Full Color</span>
+              </div>
+              <h3 class="font-serif-editorial text-2xl font-bold text-theme-primary min-h-[3.8rem] flex items-start">
+                Deckle-Edge<br>Keepsakes
+              </h3>
+              <p class="text-xs text-theme-secondary mt-1.5 leading-relaxed">
+                Wallet-sized serrated prints enlarged up to 10× original dimensions with forensic textile and complexion colorization.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-theme text-[11px] font-mono-code text-theme-muted">
+              Avg. Conservation: 16 Hours
+            </div>
+          </div>
+
+          <!-- 1970s -->
+          <div data-decade-card="1970s" class="rounded-2xl bg-theme-surface border border-theme-strong p-5 flex flex-col justify-between shadow-theme-soft transition-all">
+            <div>
+              <div class="flex items-center justify-between text-xs font-mono-code text-theme-gold mb-3">
+                <span>1960 – 1979</span>
+                <span>EARLY CHROMOGENIC</span>
+              </div>
+              <div class="aspect-[4/4.2] rounded-xl overflow-hidden mb-4 relative">
+                <img
+                  src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=650&q=80"
+                  alt="1970s Magenta Cast Corrected Photograph"
+                  class="w-full h-full object-cover"
+                />
+                <span class="absolute bottom-2 left-2 px-2.5 py-0.5 rounded bg-black/75 text-[#C5A46D] text-[10px] font-mono-code">Red/Orange Cast Neutralized</span>
+              </div>
+              <h3 class="font-serif-editorial text-2xl font-bold text-theme-primary min-h-[3.8rem] flex items-start">
+                Magenta &amp; Cyan Shift<br>Fix
+              </h3>
+              <p class="text-xs text-theme-secondary mt-1.5 leading-relaxed">
+                1970s color prints notoriously turn deep red or yellow as cyan dyes decay. We mathematically reconstruct full-spectrum color channels.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-theme text-[11px] font-mono-code text-theme-muted">
+              Avg. Conservation: 12 Hours
+            </div>
+          </div>
+
+          <!-- 1990s -->
+          <div data-decade-card="1990s" class="rounded-2xl bg-theme-surface border border-theme-strong p-5 flex flex-col justify-between shadow-theme-soft transition-all">
+            <div>
+              <div class="flex items-center justify-between text-xs font-mono-code text-theme-gold mb-3">
+                <span>1980 – 1999</span>
+                <span>35MM FILM &amp; ALBUMS</span>
+              </div>
+              <div class="aspect-[4/4.2] rounded-xl overflow-hidden mb-4 relative">
+                <img
+                  src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=650&q=80"
+                  alt="1990s Sticky Album & Negative Recovery"
+                  class="w-full h-full object-cover"
+                />
+                <span class="absolute bottom-2 left-2 px-2.5 py-0.5 rounded bg-black/75 text-[#C5A46D] text-[10px] font-mono-code">Magnetic Album Recovery</span>
+              </div>
+              <h3 class="font-serif-editorial text-2xl font-bold text-theme-primary min-h-[3.8rem] flex items-start">
+                Sticky PVC Album<br>Rescue
+              </h3>
+              <p class="text-xs text-theme-secondary mt-1.5 leading-relaxed">
+                Photos trapped behind acidic plastic sheets safely digitized, de-glared, and rebound into acid-free museum layflat volumes.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-theme text-[11px] font-mono-code text-theme-muted">
+              Avg. Conservation: 8 Hours
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 3: FEATURED RESTORATION PROJECTS (EDITORIAL GALLERY)
+         =================================================================== -->
+    <section id="featured-restoration-projects" class="py-20 lg:py-28 bg-theme-primary border-b border-theme">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="max-w-3xl mb-14" data-aos="fade-up">
+          <span class="text-xs font-mono-code uppercase tracking-[0.25em] text-theme-gold font-semibold block mb-2">Archival Case Dossiers</span>
+          <h2 class="font-serif-editorial text-3xl sm:text-4xl lg:text-5xl font-bold text-theme-primary">
+            Featured Commissions From Private Family Collections
+          </h2>
+        </div>
+
+        <div class="space-y-12">
+
+          <!-- Dossier 01 -->
+          <div class="rounded-3xl bg-theme-surface border border-theme-strong p-6 sm:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center shadow-theme-soft" data-aos="fade-up">
+            <div class="lg:col-span-6 img-zoom-wrap rounded-2xl overflow-hidden aspect-[16/11]">
+              <img
+                src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1000&q=85"
+                alt="The Travancore Silk Heirloom Portrait"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="lg:col-span-6 space-y-5">
+              <div class="flex items-center gap-3">
+                <span class="px-3 py-1 rounded-full bg-[#C5A46D]/20 text-theme-gold font-mono-code text-xs font-semibold">DOSSIER #A-108</span>
+                <span class="text-xs text-theme-muted">38 Hours Conservation</span>
+              </div>
+              <h3 class="font-serif-editorial text-3xl font-bold text-theme-primary">The Travancore Zari Portrait (1958)</h3>
+              <p class="text-sm sm:text-base text-theme-secondary leading-relaxed">
+                Found rolled inside a brass cylinder in Trivandrum, this portrait had suffered 42 micro-fractures across the emulsion. Our artists digitally re-wove the Kanchipuram gold zari border and restored the warm studio key light.
+              </p>
+              <div class="grid grid-cols-3 gap-4 pt-4 border-t border-theme text-xs">
+                <div>
+                  <span class="text-theme-muted block">Condition</span>
+                  <span class="font-semibold text-theme-primary">Brittle &amp; Cracked</span>
+                </div>
+                <div>
+                  <span class="text-theme-muted block">Output</span>
+                  <span class="font-semibold text-theme-primary">24×36" Fine Art Print</span>
+                </div>
+                <div>
+                  <span class="text-theme-muted block">Paper</span>
+                  <span class="font-semibold text-theme-gold">Hahnemühle Photo Rag</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dossier 02 & 03 Split -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="rounded-3xl bg-theme-surface border border-theme-strong p-6 sm:p-8 flex flex-col justify-between editorial-card" data-aos="fade-up">
+              <div>
+                <div class="img-zoom-wrap rounded-2xl overflow-hidden aspect-[16/10] mb-6">
+                  <img
+                    src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?auto=format&fit=crop&w=850&q=80"
+                    alt="Naval Officer Vintage Portrait Restoration"
+                    class="w-full h-full object-cover object-top"
+                  />
+                </div>
+                <span class="text-xs font-mono-code text-theme-gold uppercase tracking-wider">DOSSIER #B-214 • BOMBAY DOCKYARD</span>
+                <h3 class="font-serif-editorial text-2xl sm:text-3xl font-bold text-theme-primary mt-1">Commander Irani’s Commissioning Portrait</h3>
+                <p class="text-sm text-theme-secondary mt-2 leading-relaxed">
+                  Salt-air corrosion and silvering removed from a 1961 naval portrait; medal ribbons authenticated and hand-tinted.
+                </p>
+              </div>
+              <div class="pt-5 mt-5 border-t border-theme flex items-center justify-between text-xs">
+                <span class="font-mono-code text-theme-muted">Restored in 22 Hours</span>
+                <a href="gallery.html" class="font-semibold text-theme-gold hover:underline">Inspect Full Plate →</a>
+              </div>
+            </div>
+
+            <div class="rounded-3xl bg-theme-surface border border-theme-strong p-6 sm:p-8 flex flex-col justify-between editorial-card" data-aos="fade-up" data-aos-delay="100">
+              <div>
+                <div class="img-zoom-wrap rounded-2xl overflow-hidden aspect-[16/10] mb-6">
+                  <img
+                    src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=850&q=80"
+                    alt="Vintage Statesman & Scholar Library Portrait"
+                    class="w-full h-full object-cover object-top"
+                  />
+                </div>
+                <span class="text-xs font-mono-code text-theme-gold uppercase tracking-wider">DOSSIER #C-309 • SHANTINIKETAN ARCHIVE</span>
+                <h3 class="font-serif-editorial text-2xl sm:text-3xl font-bold text-theme-primary mt-1">Professor Sen’s Literary Study (1949)</h3>
+                <p class="text-sm text-theme-secondary mt-2 leading-relaxed">
+                  Severe ink bleed-through from a fountain pen inscription on the back of the print surgically separated from facial tones.
+                </p>
+              </div>
+              <div class="pt-5 mt-5 border-t border-theme flex items-center justify-between text-xs">
+                <span class="font-mono-code text-theme-muted">Restored in 19 Hours</span>
+                <a href="gallery.html" class="font-semibold text-theme-gold hover:underline">Inspect Full Plate →</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 4: ALBUM CRAFTSMANSHIP SHOWCASE
+         =================================================================== -->
+    <section id="album-craftsmanship" class="py-20 lg:py-28 bg-[#1E1713] text-[#F8F5EF] border-b border-[#C5A46D]/25">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <!-- Left Narrative & Material Anatomy -->
+          <div class="lg:col-span-5 space-y-6" data-aos="fade-right">
+            <span class="text-xs font-mono-code uppercase tracking-[0.25em] text-[#C5A46D] font-semibold block">Anatomy of a MEMORA Volume</span>
+            <h2 class="font-serif-editorial text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
+              Hand-Bound Like a 19th-Century First Edition
+            </h2>
+            <p class="text-sm sm:text-base text-[#D5C7B8] leading-relaxed">
+              Every album is crafted to order in our bindery. We never use synthetic glues that yellow over time—only pH-neutral archival PVA, French linen threads, and museum board cores.
+            </p>
+
+            <div class="space-y-4 pt-2">
+              <div class="p-4 rounded-xl bg-white/5 border border-[#C5A46D]/25">
+                <h4 class="font-serif-editorial text-xl font-bold text-[#C5A46D]">1. 180° Seamless Layflat Creasing</h4>
+                <p class="text-xs text-[#D5C7B8] mt-1">Panoramic family portraits flow unbroken across the center gutter with zero image loss.</p>
+              </div>
+              <div class="p-4 rounded-xl bg-white/5 border border-[#C5A46D]/25">
+                <h4 class="font-serif-editorial text-xl font-bold text-[#C5A46D]">2. Full-Grain Tuscan Calfskin &amp; Belgian Linen</h4>
+                <p class="text-xs text-[#D5C7B8] mt-1">Select from 28 tactile cover swatches with custom brass-die 24k gold or blind debossing.</p>
+              </div>
+              <div class="p-4 rounded-xl bg-white/5 border border-[#C5A46D]/25">
+                <h4 class="font-serif-editorial text-xl font-bold text-[#C5A46D]">3. 400 GSM Archival Cotton Rag Leaves</h4>
+                <p class="text-xs text-[#D5C7B8] mt-1">12-ink pigment giclée printing rated for 150+ years of fade resistance in tropical climates.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Visual Anatomy Trio -->
+          <div class="lg:col-span-7 space-y-6" data-aos="fade-left">
+            <div class="rounded-2xl overflow-hidden border border-[#C5A46D]/35 aspect-[16/10] relative">
+              <img
+                src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=1000&q=85"
+                alt="Handcrafted open layflat heirloom album"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute bottom-4 left-4 bg-black/80 px-4 py-2 rounded-lg border border-[#C5A46D]/40 text-xs font-mono-code text-[#C5A46D]">
+                FIG 01 • PANORAMIC LAYFLAT SPREAD ARCHITECTURE
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div class="rounded-2xl overflow-hidden border border-[#C5A46D]/35 aspect-[16/10] relative">
+                <img
+                  src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=700&q=80"
+                  alt="Archival cotton rag pages and typography"
+                  class="w-full h-full object-cover"
+                />
+                <span class="absolute bottom-3 left-3 bg-black/80 px-3 py-1 rounded text-[11px] font-mono-code text-[#F8F5EF]">FIG 02 • CALLIGRAPHIC CAPTIONS</span>
+              </div>
+              <div class="rounded-2xl overflow-hidden border border-[#C5A46D]/35 aspect-[16/10] relative">
+                <img
+                  src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=700&q=80"
+                  alt="Hand-stitched leather spine collection"
+                  class="w-full h-full object-cover"
+                />
+                <span class="absolute bottom-3 left-3 bg-black/80 px-3 py-1 rounded text-[11px] font-mono-code text-[#F8F5EF]">FIG 03 • SMYTH-SEWN SPINES</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 5: WHY CHOOSE OUR STUDIO (ARCHITECTURAL BENTO GRID)
+         =================================================================== -->
+    <section id="why-choose-us" class="py-20 lg:py-28 bg-theme-primary border-b border-theme">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+          <span class="text-xs font-mono-code uppercase tracking-[0.25em] text-theme-gold font-semibold block mb-2">The MEMORA Distinction</span>
+          <h2 class="font-serif-editorial text-3xl sm:text-4xl lg:text-5xl font-bold text-theme-primary">
+            Why Discerning Families &amp; Historians Entrust Us
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
+
+          <!-- Bento 1: Expertise -->
+          <div class="lg:col-span-4 rounded-2xl bg-theme-surface border border-theme-strong p-7 flex flex-col justify-between editorial-card" data-aos="fade-up">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-[#C5A46D]/20 text-theme-gold flex items-center justify-center mb-5">
+                <i data-lucide="award" class="w-6 h-6"></i>
+              </div>
+              <h3 class="font-serif-editorial text-2xl font-bold text-theme-primary">Fine-Art Conservationists, Never Bots</h3>
+              <p class="text-sm text-theme-secondary mt-2.5 leading-relaxed">
+                Automated AI filters hallucinate generic faces and erase family resemblance. Our master artists reconstruct every iris, dimple, and saree weave manually.
+              </p>
+            </div>
+            <p class="text-xs font-mono-code text-theme-gold mt-6 pt-4 border-t border-theme">14+ YEARS AVERAGE ARTIST TENURE</p>
+          </div>
+
+          <!-- Bento 2: Center Visual Vault Card -->
+          <div class="lg:col-span-4 rounded-2xl overflow-hidden border border-theme-strong relative min-h-[320px] flex flex-col justify-end p-6" data-aos="fade-up" data-aos-delay="100">
+            <img
+              src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=800&q=80"
+              alt="Fine-art brushes and color swatches in studio"
+              class="absolute inset-0 w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#14110F] via-[#14110F]/40 to-transparent"></div>
+            <div class="relative z-10 text-white">
+              <span class="text-xs font-mono-code text-[#C5A46D]">BESPOKE PIGMENTS</span>
+              <h3 class="font-serif-editorial text-2xl font-bold mt-1">Calibrated Museum Color</h3>
+              <p class="text-xs text-[#D5C7B8] mt-1">Every monitor in our studio is hardware-calibrated weekly to Pantone &amp; Fogra archival standards.</p>
+            </div>
+          </div>
+
+          <!-- Bento 3: Strict Privacy Vault -->
+          <div class="lg:col-span-4 rounded-2xl bg-[#30251F] text-[#F8F5EF] border border-[#C5A46D]/40 p-7 flex flex-col justify-between editorial-card" data-aos="fade-up" data-aos-delay="200">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-[#C5A46D] text-[#14110F] flex items-center justify-center mb-5">
+                <i data-lucide="lock" class="w-6 h-6"></i>
+              </div>
+              <h3 class="font-serif-editorial text-2xl font-bold text-white">Strict Private Family Vault</h3>
+              <p class="text-sm text-[#D5C7B8] mt-2.5 leading-relaxed">
+                Your family photographs are never used for public marketing or AI training without explicit written consent. Encrypted storage with optional NDA.
+              </p>
+            </div>
+            <p class="text-xs font-mono-code text-[#C5A46D] mt-6 pt-4 border-t border-white/15">256-BIT ENCRYPTED ARCHIVE</p>
+          </div>
+
+          <!-- Bento 4: Physical Print Handling -->
+          <div class="lg:col-span-6 rounded-2xl bg-theme-secondary border border-theme-strong p-7 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 editorial-card" data-aos="fade-up">
+            <div>
+              <span class="text-xs font-mono-code text-theme-gold font-semibold">WHITE-GLOVE LOGISTICS</span>
+              <h3 class="font-serif-editorial text-2xl font-bold text-theme-primary mt-1">Insured Doorstep Pickup Across 18 Cities</h3>
+              <p class="text-sm text-theme-secondary mt-1.5">
+                Afraid to mail fragile glass negatives or torn prints? Our crush-proof archival transit cases collect and return your originals safely.
+              </p>
+            </div>
+            <a href="contact.html" class="btn-luxury-outline shrink-0 text-xs">Book Pickup</a>
+          </div>
+
+          <!-- Bento 5: Unlimited Revisions -->
+          <div class="lg:col-span-6 rounded-2xl bg-theme-secondary border border-theme-strong p-7 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 editorial-card" data-aos="fade-up" data-aos-delay="100">
+            <div>
+              <span class="text-xs font-mono-code text-theme-gold font-semibold">100% EMOTIONAL GUARANTEE</span>
+              <h3 class="font-serif-editorial text-2xl font-bold text-theme-primary mt-1">Pay Final Balance Only After Proof Approval</h3>
+              <p class="text-sm text-theme-secondary mt-1.5">
+                Inspect every eyelash and color tone in your interactive Customer Dashboard before approving final master printing.
+              </p>
+            </div>
+            <a href="dashboard.html" class="btn-luxury-primary shrink-0 text-xs">View Demo Proof</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 6: FEATURED CUSTOMER MEMORIES (DOCUMENTARY STORYTELLING)
+         =================================================================== -->
+    <section id="featured-customer-memories" class="py-20 lg:py-28 bg-theme-secondary border-b border-theme">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="max-w-3xl mb-14" data-aos="fade-up">
+          <span class="text-xs font-mono-code uppercase tracking-[0.25em] text-theme-gold font-semibold block mb-2">Oral Histories &amp; Heirlooms</span>
+          <h2 class="font-serif-editorial text-3xl sm:text-4xl lg:text-5xl font-bold text-theme-primary">
+            Behind Every Restored Print Lies a Human Story
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+
+          <!-- Documentary Story 1 -->
+          <div class="rounded-3xl bg-theme-surface border border-theme-strong overflow-hidden shadow-theme-soft flex flex-col" data-aos="fade-up">
+            <div class="grid grid-cols-1 sm:grid-cols-12">
+              <div class="sm:col-span-5 aspect-square sm:aspect-auto">
+                <img
+                  src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=600&q=80"
+                  alt="Kabir Bedi holding restored grandfather portrait"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="sm:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+                <div>
+                  <span class="text-xs font-mono-code text-theme-gold">MEMORY LOG #084 • SHIMLA, 1953</span>
+                  <h3 class="font-serif-editorial text-2xl font-bold text-theme-primary mt-1">“My Grandfather’s Violin Recital at the Gaiety Theatre”</h3>
+                  <p class="text-sm text-theme-secondary mt-3 leading-relaxed">
+                    “A house fire in 1989 charred the edges of my Dada’s only solo concert photograph. MEMORA reconstructed the missing mahogany violin scroll and framed it alongside his original sheet music.”
+                  </p>
+                </div>
+                <div class="pt-5 mt-5 border-t border-theme flex items-center justify-between text-xs">
+                  <span class="font-bold text-theme-primary">— Kabir Oberoi, Architect</span>
+                  <span class="font-mono-code text-theme-muted">Fire &amp; Char Recovery</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Documentary Story 2 -->
+          <div class="rounded-3xl bg-theme-surface border border-theme-strong overflow-hidden shadow-theme-soft flex flex-col" data-aos="fade-up" data-aos-delay="100">
+            <div class="grid grid-cols-1 sm:grid-cols-12">
+              <div class="sm:col-span-5 aspect-square sm:aspect-auto">
+                <img
+                  src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=600&q=80"
+                  alt="Siddharth & Family Golden Jubilee Album"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="sm:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+                <div>
+                  <span class="text-xs font-mono-code text-theme-gold">MEMORY LOG #112 • JAIPUR, 1974</span>
+                  <h3 class="font-serif-editorial text-2xl font-bold text-theme-primary mt-1">“50 Years of Marriage Bound in One Emerald Leather Volume”</h3>
+                  <p class="text-sm text-theme-secondary mt-3 leading-relaxed">
+                    “For our parents’ Golden Anniversary, my siblings and I gathered 85 faded snapshots from five decades. MEMORA restored every single one and designed a chronological layflat masterpiece.”
+                  </p>
+                </div>
+                <div class="pt-5 mt-5 border-t border-theme flex items-center justify-between text-xs">
+                  <span class="font-bold text-theme-primary">— Siddharth Rathore</span>
+                  <span class="font-mono-code text-theme-muted">Luxury Leather Album</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 7: CREATIVE CTA WITH PHOTO UPLOAD & CONSULTATION OPTIONS
+         =================================================================== -->
+    <section id="h2-creative-cta" class="py-20 lg:py-28 bg-theme-primary">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="rounded-3xl bg-[#251D18] text-[#F8F5EF] border border-[#C5A46D]/40 p-8 sm:p-14 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center shadow-2xl">
+          <div class="lg:col-span-7 space-y-5">
+            <span class="text-xs font-mono-code uppercase tracking-[0.25em] text-[#C5A46D]">Two Ways to Begin Today</span>
+            <h2 class="font-serif-editorial text-3xl sm:text-5xl font-bold text-white leading-tight">
+              Entrust Your Family Archive to Master Hands
+            </h2>
+            <p class="text-sm sm:text-base text-[#D5C7B8] leading-relaxed max-w-xl">
+              Upload a digital scan right now for an instant restoration quote, or book a private 20-minute video or in-studio consultation with our Chief Archivist.
+            </p>
+            <div class="pt-3 cta-group">
+              <button type="button" data-open-upload-modal data-package-name="Priority Archival Assessment" class="btn-gold">
+                <i data-lucide="upload" class="w-4 h-4"></i>
+                <span>Upload Photograph Now</span>
+              </button>
+              <a href="contact.html#consultation" class="btn-luxury-outline text-white border-[#C5A46D]/50 hover:bg-[#C5A46D]/15">
+                <i data-lucide="calendar" class="w-4 h-4 text-[#C5A46D]"></i>
+                <span>Book Consultation</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5">
+            <div class="rounded-2xl overflow-hidden border border-[#C5A46D]/35 relative">
+              <img
+                src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80"
+                alt="MEMORA Private Consultation Atelier"
+                class="w-full h-64 sm:h-72 object-cover"
+              />
+              <div class="p-4 bg-[#181310] flex items-center justify-between text-xs">
+                <span class="text-[#C5A46D] font-mono-code">PRIVATE VIEWING SUITE • KALA GHODA</span>
+                <span class="text-[#D5C7B8]">By Appointment</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Reusable Consistent Footer -->
+  <div id="site-footer"></div>
+
+  <!-- Interactive Decade Filter Script for Home 2 -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const decadeBtns = document.querySelectorAll('[data-decade-btn]');
+      const decadeCards = document.querySelectorAll('[data-decade-card]');
+      decadeBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const target = btn.getAttribute('data-decade-btn');
+          decadeBtns.forEach((b) => {
+            b.classList.remove('bg-[#30251F]', 'text-[#F8F5EF]', 'border-[#C5A46D]');
+            b.classList.add('bg-theme-surface', 'text-theme-primary');
+          });
+          btn.classList.remove('bg-theme-surface', 'text-theme-primary');
+          btn.classList.add('bg-[#30251F]', 'text-[#F8F5EF]', 'border-[#C5A46D]');
+
+          decadeCards.forEach((card) => {
+            if (card.getAttribute('data-decade-card') === target) {
+              card.classList.add('border-2', 'border-[#C5A46D]', 'scale-[1.02]');
+            } else {
+              card.classList.remove('border-2', 'border-[#C5A46D]', 'scale-[1.02]');
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+

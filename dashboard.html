@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <title>Customer Dashboard | MEMORA STUDIO — Private Conservation Vault</title>
+  <meta name="description" content="Manage your photo restoration commissions, upload vintage scans, compare interactive before-and-after proofs, and track custom heirloom albums." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            ivory: '#F8F5EF',
+            cream: '#EDE4D6',
+            mutedbrown: '#8B6F58',
+            espresso: '#30251F',
+            gold: '#C5A46D',
+            charcoal: '#252525'
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Custom Studio Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="bg-theme-primary text-theme-primary antialiased selection:bg-[#C5A46D] selection:text-[#14110F]">
+
+  <!-- Mobile Sidebar Backdrop -->
+  <div id="dash-mobile-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 hidden lg:hidden"></div>
+
+  <div class="min-h-screen flex flex-col lg:flex-row">
+
+    <!-- ===================================================================
+         SIDEBAR NAVIGATION (COLLAPSIBLE ON MOBILE, FIXED ON DESKTOP)
+         =================================================================== -->
+    <aside
+      id="dash-sidebar"
+      class="dash-sidebar fixed lg:static inset-y-0 left-0 z-50 w-64 xl:w-72 flex flex-col justify-between p-5 xl:p-6 hidden lg:flex shrink-0 overflow-y-auto transition-colors duration-300"
+      aria-label="Customer Dashboard Navigation"
+    >
+      <div>
+        <!-- Brand Header -->
+        <div class="flex items-center justify-between pb-6 border-b border-theme">
+          <a href="index.html" class="flex items-center gap-3 group">
+            <div class="w-10 h-10 rounded-xl bg-[#30251F] dark:bg-[#C5A46D] text-[#F8F5EF] dark:text-[#14110F] flex items-center justify-center font-bold shadow-sm">
+              <i data-lucide="aperture" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <span class="font-serif-editorial text-xl font-bold tracking-wider text-theme-primary block leading-none">MEMORA</span>
+              <span class="text-[10px] tracking-[0.24em] uppercase text-theme-gold font-semibold">CLIENT VAULT</span>
+            </div>
+          </a>
+          <button type="button" id="dash-mobile-close" class="lg:hidden w-8 h-8 rounded-full border border-theme flex items-center justify-center text-theme-primary hover:border-[#C5A46D]">
+            <i data-lucide="x" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <!-- 8 Dashboard Navigation Items -->
+        <nav class="mt-6 space-y-1.5">
+          <button type="button" data-dash-tab="overview" class="dash-tab-btn active">
+            <i data-lucide="layout-dashboard" class="w-4 h-4"></i>
+            <span>1. Dashboard Overview</span>
+          </button>
+
+          <button type="button" data-dash-tab="upload" class="dash-tab-btn">
+            <i data-lucide="upload-cloud" class="w-4 h-4"></i>
+            <span>2. Upload Old Photos</span>
+          </button>
+
+          <button type="button" data-dash-tab="projects" class="dash-tab-btn">
+            <i data-lucide="folder-heart" class="w-4 h-4"></i>
+            <span>3. My Restoration Projects</span>
+          </button>
+
+          <button type="button" data-dash-tab="tracking" class="dash-tab-btn">
+            <i data-lucide="git-commit" class="w-4 h-4"></i>
+            <span>4. Status Tracking</span>
+          </button>
+
+          <button type="button" data-dash-tab="proofs" class="dash-tab-btn justify-between">
+            <span class="flex items-center gap-3">
+              <i data-lucide="split-square-horizontal" class="w-4 h-4"></i>
+              <span>5. Proof Approval</span>
+            </span>
+            <span class="px-2 py-0.5 rounded-full bg-[#C5A46D]/25 text-theme-gold font-mono-code text-[10px] font-bold">2</span>
+          </button>
+
+          <button type="button" data-dash-tab="albums" class="dash-tab-btn">
+            <i data-lucide="book-open" class="w-4 h-4"></i>
+            <span>6. My Albums</span>
+          </button>
+
+          <button type="button" data-dash-tab="orders" class="dash-tab-btn">
+            <i data-lucide="receipt" class="w-4 h-4"></i>
+            <span>7. Orders &amp; Payments</span>
+          </button>
+
+          <button type="button" data-dash-tab="settings" class="dash-tab-btn">
+            <i data-lucide="user-cog" class="w-4 h-4"></i>
+            <span>8. Profile &amp; Settings</span>
+          </button>
+        </nav>
+      </div>
+
+      <!-- Bottom Logout -->
+      <div class="pt-6 border-t border-theme">
+        <button type="button" data-action="logout" class="w-full flex items-center gap-2.5 px-4 py-2.5 rounded-xl text-xs font-semibold text-rose-700 dark:text-rose-400 hover:bg-rose-500/10 transition">
+          <i data-lucide="log-out" class="w-4 h-4"></i>
+          <span>Logout of Vault</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- ===================================================================
+         MAIN DASHBOARD WORKSPACE
+         =================================================================== -->
+    <div class="flex-1 flex flex-col min-w-0">
+
+      <!-- Top Dashboard Header Bar -->
+      <header class="sticky top-0 z-30 bg-theme-glass border-b border-theme px-3 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-3 sm:gap-4">
+        <div class="flex items-center gap-2.5 sm:gap-3 min-w-0">
+          <button type="button" id="dash-mobile-open" class="lg:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-xl border border-theme-strong flex items-center justify-center text-theme-primary shrink-0 hover:border-[#C5A46D]" aria-label="Open Dashboard Sidebar">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+          <div class="min-w-0">
+            <span class="hidden sm:block text-[11px] font-mono-code uppercase tracking-widest text-theme-gold truncate">Encrypted Conservation Portal</span>
+            <h1 class="font-serif-editorial text-base sm:text-2xl font-bold text-theme-primary truncate leading-tight">
+              Welcome back, <span data-user-fullname>Aarav Singhania</span>
+            </h1>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2 sm:gap-2.5 shrink-0">
+          <!-- RTL Toggle (Left-Right Arrow Icon) -->
+          <button type="button" data-action="toggle-rtl" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-theme-strong flex items-center justify-center text-theme-primary hover:border-[#C5A46D] hover:text-theme-gold transition shrink-0" aria-label="Toggle LTR/RTL Direction" title="Toggle LTR / RTL Direction">
+            <i data-lucide="arrow-left-right" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+          </button>
+
+          <!-- Theme Toggle -->
+          <button type="button" data-action="toggle-theme" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-theme-strong flex items-center justify-center text-theme-primary hover:border-[#C5A46D] transition shrink-0" aria-label="Toggle Theme">
+            <i data-lucide="moon" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+          </button>
+
+          <!-- User Avatar Pill -->
+          <button type="button" data-jump-tab="settings" class="flex items-center gap-2 p-1 sm:pl-1.5 sm:pr-3 sm:py-1 rounded-full bg-theme-surface border border-theme-strong hover:border-[#C5A46D] transition shrink-0">
+            <img
+              data-user-avatar
+              src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=250&q=80"
+              alt="Client Avatar"
+              class="w-6 h-6 sm:w-7 sm:h-7 rounded-full object-cover border border-[#C5A46D]"
+            />
+            <span class="hidden md:inline text-xs font-semibold text-theme-primary" data-user-fullname>Aarav Singhania</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Dashboard Content Container -->
+      <main class="p-4 sm:p-8 space-y-8 max-w-7xl w-full mx-auto">
+
+        <!-- ===============================================================
+             PANEL 1: DASHBOARD OVERVIEW
+             =============================================================== -->
+        <section data-dash-panel="overview" class="space-y-8">
+          <!-- 4 Metric Cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div class="rounded-2xl bg-theme-surface border border-theme-strong p-6 shadow-theme-soft">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono-code uppercase text-theme-muted">Total Uploaded Photos</span>
+                <i data-lucide="images" class="w-5 h-5 text-theme-gold"></i>
+              </div>
+              <p id="stat-total-photos" class="font-serif-editorial text-4xl font-bold text-theme-primary mt-3">16</p>
+              <p class="text-xs text-theme-secondary mt-1">1200 DPI Archival Vault</p>
+            </div>
+
+            <div class="rounded-2xl bg-theme-surface border border-theme-strong p-6 shadow-theme-soft">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono-code uppercase text-theme-muted">Active Restorations</span>
+                <i data-lucide="sparkles" class="w-5 h-5 text-theme-gold"></i>
+              </div>
+              <p id="stat-active-projects" class="font-serif-editorial text-4xl font-bold text-theme-primary mt-3">3</p>
+              <p class="text-xs text-theme-secondary mt-1">In conservation studio</p>
+            </div>
+
+            <div class="rounded-2xl bg-theme-surface border border-theme-strong p-6 shadow-theme-soft">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono-code uppercase text-theme-muted">Completed Projects</span>
+                <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-500"></i>
+              </div>
+              <p id="stat-completed-projects" class="font-serif-editorial text-4xl font-bold text-theme-primary mt-3">1</p>
+              <p class="text-xs text-theme-secondary mt-1">Ready for master download</p>
+            </div>
+
+            <div class="rounded-2xl bg-[#30251F] text-[#F8F5EF] border border-[#C5A46D] p-6 shadow-xl">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono-code uppercase text-[#C5A46D]">Pending Proof Approvals</span>
+                <i data-lucide="bell-ring" class="w-5 h-5 text-[#C5A46D]"></i>
+              </div>
+              <p id="stat-pending-proofs" class="font-serif-editorial text-4xl font-bold text-white mt-3">2</p>
+              <button type="button" data-jump-tab="proofs" class="text-xs font-semibold text-[#C5A46D] underline mt-1 inline-block">
+                Inspect Proofs Now →
+              </button>
+            </div>
+          </div>
+
+          <!-- Recent Activities & Quick Actions -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <div class="lg:col-span-7 rounded-2xl bg-theme-surface border border-theme-strong p-6 sm:p-7 shadow-theme-soft">
+              <div class="flex items-center justify-between mb-5">
+                <h2 class="font-serif-editorial text-2xl font-bold text-theme-primary">Recent Conservation Activities</h2>
+                <span class="text-xs font-mono-code text-theme-gold">Live Studio Feed</span>
+              </div>
+              <ul id="overview-activity-list" class="space-y-4"></ul>
+            </div>
+
+            <div class="lg:col-span-5 rounded-2xl bg-theme-secondary border border-theme-strong p-6 sm:p-7 flex flex-col justify-between">
+              <div class="space-y-4">
+                <span class="text-xs font-mono-code uppercase tracking-wider text-theme-gold font-semibold">Quick Actions</span>
+                <h3 class="font-serif-editorial text-2xl font-bold text-theme-primary">Start a New Restoration or Inspect Proofs</h3>
+                <p class="text-xs sm:text-sm text-theme-secondary leading-relaxed">
+                  Have another vintage photograph to restore? Drag and drop your scan or review Proof v1 for your 1951 Shimla Summer Portrait.
+                </p>
+              </div>
+              <div class="space-y-3 pt-6">
+                <button type="button" data-jump-tab="upload" class="btn-luxury-primary w-full text-xs">
+                  <i data-lucide="upload" class="w-4 h-4"></i>
+                  <span>Upload New Vintage Photo</span>
+                </button>
+                <button type="button" data-jump-tab="proofs" class="btn-luxury-outline w-full text-xs">
+                  <i data-lucide="eye" class="w-4 h-4"></i>
+                  <span>Open Before/After Proof Viewer</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===============================================================
+             PANEL 2: UPLOAD OLD PHOTOS
+             =============================================================== -->
+        <section data-dash-panel="upload" class="hidden space-y-6">
+          <div class="rounded-3xl bg-theme-surface border border-theme-strong p-6 sm:p-10 shadow-theme-soft">
+            <span class="text-xs font-mono-code uppercase tracking-wider text-theme-gold font-semibold">New Conservation Request</span>
+            <h2 class="font-serif-editorial text-3xl font-bold text-theme-primary mt-1">Upload Old Photographs</h2>
+            <p class="text-sm text-theme-secondary mt-1 mb-6">
+              Supports JPG, JPEG, PNG, and WEBP. Upload multiple scans and specify your exact restoration requirements.
+            </p>
+
+            <form id="dash-upload-form" class="space-y-6" novalidate>
+              <!-- Drag and Drop Area -->
+              <label
+                id="dash-dropzone"
+                for="dash-file-input"
+                class="border-2 border-dashed border-theme-strong rounded-2xl p-8 text-center cursor-pointer hover:border-[#C5A46D] transition flex flex-col items-center justify-center bg-theme-primary/50"
+              >
+                <div class="w-14 h-14 rounded-2xl bg-[#C5A46D]/20 text-theme-gold flex items-center justify-center mb-3">
+                  <i data-lucide="upload-cloud" class="w-7 h-7"></i>
+                </div>
+                <p class="text-sm sm:text-base font-semibold text-theme-primary">Drag &amp; drop your vintage photographs here, or click to browse</p>
+                <p class="text-xs text-theme-muted mt-1">Supports multiple JPG, JPEG, PNG, WEBP files • Encrypted private transfer</p>
+                <input id="dash-file-input" type="file" multiple accept=".jpg,.jpeg,.png,.webp" class="hidden" />
+              </label>
+
+              <!-- Live Photo Previews -->
+              <div id="dash-upload-previews" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="up-photo-title" class="block text-xs font-semibold uppercase tracking-wider text-theme-secondary mb-1.5">Photograph Title / Era *</label>
+                  <input id="up-photo-title" type="text" required placeholder="e.g., 1958 Grandfather Railway Portrait" class="input-luxury" />
+                </div>
+                <div>
+                  <label for="up-restoration-type" class="block text-xs font-semibold uppercase tracking-wider text-theme-secondary mb-1.5">Select Restoration Type *</label>
+                  <select id="up-restoration-type" required class="input-luxury">
+                    <option value="">Choose restoration discipline...</option>
+                    <option value="Basic Restoration (₹999)">Basic Restoration (₹999)</option>
+                    <option value="Standard Restoration (₹2,499)">Standard Restoration (₹2,499)</option>
+                    <option value="Premium Restoration & Colorization (₹4,499)">Premium Restoration &amp; Colorization (₹4,499)</option>
+                    <option value="Complex Forensic Restoration (Custom)">Complex Forensic Restoration (Custom Quote)</option>
+                    <option value="Face Enhancement & Upscaling">Face Enhancement &amp; Upscaling</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label for="up-instructions" class="block text-xs font-semibold uppercase tracking-wider text-theme-secondary mb-1.5">Detailed Restoration Instructions *</label>
+                <textarea id="up-instructions" rows="3" required placeholder="Describe tears, stains, missing corners, or preferred clothing colors for colorization..." class="input-luxury"></textarea>
+              </div>
+
+              <button type="submit" class="btn-luxury-primary">
+                <i data-lucide="send" class="w-4 h-4"></i>
+                <span>Submit Restoration Request</span>
+              </button>
+            </form>
+          </div>
+        </section>
+
+        <!-- ===============================================================
+             PANEL 3: MY RESTORATION PROJECTS
+             =============================================================== -->
+        <section data-dash-panel="projects" class="hidden space-y-6">
+          <div class="rounded-3xl bg-theme-surface border border-theme-strong overflow-hidden shadow-theme-soft">
+            <div class="p-6 sm:p-8 border-b border-theme flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <span class="text-xs font-mono-code uppercase tracking-wider text-theme-gold font-semibold">Client Archive Ledger</span>
+                <h2 class="font-serif-editorial text-3xl font-bold text-theme-primary mt-0.5">My Restoration Projects</h2>
+              </div>
+              <button type="button" data-jump-tab="upload" class="btn-luxury-primary !py-2.5 !px-5 text-xs">
+                + New Restoration Request
+              </button>
+            </div>
+
+            <div class="overflow-x-auto">
+              <table class="w-full min-w-[720px] text-left border-collapse">
+                <thead>
+                  <tr class="bg-theme-secondary border-b border-theme text-[11px] font-mono-code uppercase text-theme-muted">
+                    <th class="p-4 whitespace-nowrap min-w-[220px]">Original Photograph &amp; Notes</th>
+                    <th class="p-4 whitespace-nowrap">Project ID</th>
+                    <th class="p-4 whitespace-nowrap">Submitted</th>
+                    <th class="p-4 whitespace-nowrap">Assigned Service</th>
+                    <th class="p-4 whitespace-nowrap">Current Status</th>
+                    <th class="p-4 text-right whitespace-nowrap">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="dash-projects-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===============================================================
+             PANEL 4: RESTORATION STATUS TRACKING (7 STAGES)
+             =============================================================== -->
+        <section data-dash-panel="tracking" class="hidden space-y-6">
+          <div class="rounded-3xl bg-theme-surface border border-theme-strong p-6 sm:p-10 shadow-theme-soft">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+              <div>
+                <span class="text-xs font-mono-code uppercase tracking-wider text-theme-gold font-semibold">7-Stage Conservation Pipeline</span>
+                <h2 class="font-serif-editorial text-3xl font-bold text-theme-primary mt-0.5">Restoration Status Tracking</h2>
+              </div>
+              <div class="w-full sm:w-80">
+                <label for="tracking-project-selector" class="block text-[11px] font-mono-code uppercase text-theme-muted mb-1">Select Project to Track</label>
+                <select id="tracking-project-selector" class="input-luxury !py-2 text-xs font-semibold"></select>
+              </div>
+            </div>
+
+            <div id="tracking-pipeline-mount"></div>
+          </div>
+        </section>
+
+        <!-- ===============================================================
+             PANEL 5: PROOF APPROVAL (BEFORE/AFTER + REVISIONS)
+             =============================================================== -->
+        <section data-dash-panel="proofs" class="hidden space-y-6">
+          <div class="rounded-3xl bg-theme-surface border border-theme-strong p-6 sm:p-10 shadow-theme-soft">
+            <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-theme">
+              <div>
+                <span class="text-xs font-mono-code uppercase tracking-wider text-theme-gold font-semibold">Interactive Quality Inspection</span>
+                <h2 id="proof-project-title" class="font-serif-editorial text-2xl sm:text-3xl font-bold text-theme-primary mt-0.5">
+                  #MEM-8492 — 1951 Shimla Summer Estate Portrait
+                </h2>
+              </div>
+              <span id="proof-status-badge" class="px-3.5 py-1.5 rounded-full bg-[#C5A46D]/20 text-theme-gold font-mono-code text-xs font-semibold">
+                Waiting for Customer Approval
+              </span>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-8 items-start">
+              <!-- Interactive Before/After Comparison Slider -->
+              <div class="lg:col-span-7 space-y-3">
+                <div class="ba-slider-container aspect-[4/3] w-full">
+                  <img
+                    id="proof-after-img"
+                    src="assets/images/proof-v1.jpg"
+                    alt="Restored Master Proof"
+                    class="w-full h-full object-cover"
+                  />
+                  <span class="absolute top-3 right-3 z-10 px-3 py-1 rounded-full bg-[#30251F]/90 text-[#C5A46D] text-xs font-mono-code">Restored Proof v1</span>
+
+                  <div class="ba-before-layer">
+                    <img
+                      id="proof-before-img"
+                      src="assets/images/proof-original.jpg"
+                      alt="Original Submitted Scan"
+                      class="w-full h-full object-cover"
+                    />
+                    <span class="absolute top-3 left-3 z-10 px-3 py-1 rounded-full bg-black/80 text-white text-xs font-mono-code">Original Scan</span>
+                  </div>
+
+                  <div class="ba-handle">
+                    <div class="ba-handle-button"><i data-lucide="move-horizontal" class="w-5 h-5"></i></div>
+                  </div>
+                </div>
+                <p class="text-xs text-theme-muted text-center">Drag the golden slider handle left or right to compare original scan vs. restored proof.</p>
+              </div>
+
+              <!-- Approve or Submit Revision Comments -->
+              <div class="lg:col-span-5 space-y-5">
+                <div class="p-5 rounded-2xl bg-theme-secondary border border-theme space-y-4">
+                  <h3 class="font-serif-editorial text-2xl font-bold text-theme-primary">Decision &amp; Revision Notes</h3>
+                  <p class="text-xs text-theme-secondary">
+                    If you are delighted with the restoration, click <strong>Approve Proof</strong> to unlock your uncompressed master files. Or enter revision notes below.
+                  </p>
+
+                  <div>
+                    <label for="proof-revision-comment" class="block text-xs font-semibold uppercase tracking-wider text-theme-secondary mb-1.5">Revision Comments (Optional for Approval)</label>
+                    <textarea
+                      id="proof-revision-comment"
+                      rows="3"
+                      placeholder="e.g., Please make the shawl slightly deeper maroon and warm up the background..."
+                      class="input-luxury text-xs"
+                    ></textarea>
+                  </div>
+
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <button type="button" id="btn-approve-proof" class="btn-gold !py-2.5 text-xs">
+                      <i data-lucide="check-circle" class="w-4 h-4"></i>
+                      <span>Approve Proof</span>
+                    </button>
+                    <button type="button" id="btn-request-changes" class="btn-luxury-outline !py-2.5 text-xs">
+                      <i data-lucide="message-square-plus" class="w-4 h-4"></i>
+                      <span>Request Changes</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Revision Log -->
+                <div>
+                  <h4 class="text-xs font-mono-code uppercase tracking-wider text-theme-muted mb-2.5">Conservation &amp; Revision Log</h4>
+                  <div id="proof-revision-history" class="space-y-2.5"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===============================================================
+             PANEL 6: MY ALBUMS
+             =============================================================== -->
+        <section data-dash-panel="albums" class="hidden space-y-6">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <span class="text-xs font-mono-code uppercase tracking-wider text-theme-gold font-semibold">Handcrafted Bindery Commissions</span>
+              <h2 class="font-serif-editorial text-3xl font-bold text-theme-primary mt-0.5">My Bespoke Albums</h2>
+            </div>
+            <a href="pricing.html#album-packages" class="btn-luxury-primary !py-2.5 !px-5 text-xs">
+              + Commission New Album
+            </a>
+          </div>
+          <div id="dash-albums-grid" class="grid grid-cols-1 lg:grid-cols-2 gap-6"></div>
+        </section>
+
+        <!-- ===============================================================
+             PANEL 7: ORDERS & PAYMENTS
+             =============================================================== -->
+        <section data-dash-panel="orders" class="hidden space-y-6">
+          <!-- Clear Demo Payment Transparency Banner -->
+          <div class="p-4 rounded-2xl bg-[#C5A46D]/15 border border-[#C5A46D] flex items-start gap-3">
+            <i data-lucide="shield-alert" class="w-5 h-5 text-theme-gold shrink-0 mt-0.5"></i>
+            <p class="text-xs sm:text-sm text-theme-primary">
+              <strong>Demo Environment Notice:</strong> All invoices and payment statuses displayed below are simulated via browser <code>localStorage</code> for demonstration purposes. No real financial transactions or credit card charges occur here.
+            </p>
+          </div>
+
+          <div class="rounded-3xl bg-theme-surface border border-theme-strong overflow-hidden shadow-theme-soft">
+            <div class="p-6 sm:p-8 border-b border-theme">
+              <span class="text-xs font-mono-code uppercase tracking-wider text-theme-gold font-semibold">INR (₹) GST Billing Ledger</span>
+              <h2 class="font-serif-editorial text-3xl font-bold text-theme-primary mt-0.5">Orders &amp; Payments</h2>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="w-full min-w-[760px] text-left border-collapse">
+                <thead>
+                  <tr class="bg-theme-secondary border-b border-theme text-[11px] font-mono-code uppercase text-theme-muted">
+                    <th class="p-4 whitespace-nowrap">Invoice ID</th>
+                    <th class="p-4 whitespace-nowrap">Date</th>
+                    <th class="p-4 whitespace-nowrap min-w-[180px]">Commission Description</th>
+                    <th class="p-4 whitespace-nowrap">Pricing Breakdown</th>
+                    <th class="p-4 whitespace-nowrap">Total (INR)</th>
+                    <th class="p-4 whitespace-nowrap">Payment Status</th>
+                    <th class="p-4 text-right whitespace-nowrap">Invoice</th>
+                  </tr>
+                </thead>
+                <tbody id="dash-orders-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===============================================================
+             PANEL 8: PROFILE & SETTINGS
+             =============================================================== -->
+        <section data-dash-panel="settings" class="hidden space-y-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+
+            <!-- Personal Details & Avatar -->
+            <div class="lg:col-span-7 rounded-3xl bg-theme-surface border border-theme-strong p-6 sm:p-8 shadow-theme-soft space-y-6">
+              <h2 class="font-serif-editorial text-2xl sm:text-3xl font-bold text-theme-primary">Profile &amp; Personal Details</h2>
+
+              <div class="flex items-center gap-5 pb-6 border-b border-theme">
+                <img
+                  data-user-avatar
+                  src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=320&q=85"
+                  alt="Profile Portrait"
+                  class="w-20 h-20 rounded-2xl object-cover border-2 border-[#C5A46D]"
+                />
+                <div>
+                  <label for="prof-avatar-input" class="btn-luxury-outline !py-2 !px-4 text-xs cursor-pointer">
+                    Change Profile Portrait
+                  </label>
+                  <input id="prof-avatar-input" type="file" accept="image/*" class="hidden" />
+                  <p class="text-[11px] text-theme-muted mt-1.5">JPG or PNG • Stored locally in your browser</p>
+                </div>
+              </div>
+
+              <form id="dash-profile-form" class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="prof-first" class="block text-xs font-semibold uppercase tracking-wider text-theme-secondary mb-1.5">First Name</label>
+                    <input id="prof-first" type="text" required class="input-luxury" />
+                  </div>
+                  <div>
+                    <label for="prof-last" class="block text-xs font-semibold uppercase tracking-wider text-theme-secondary mb-1.5">Last Name</label>
+                    <input id="prof-last" type="text" required class="input-luxury" />
+                  </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="prof-email" class="block text-xs font-semibold uppercase tracking-wider text-theme-secondary mb-1.5">Email Address</label>
+                    <input id="prof-email" type="email" required class="input-luxury" />
+                  </div>
+                  <div>
+                    <label for="prof-phone" class="block text-xs font-semibold uppercase tracking-wider text-theme-secondary mb-1.5">Phone Number</label>
+                    <input id="prof-phone" type="tel" required class="input-luxury" />
+                  </div>
+                </div>
+                <button type="submit" class="btn-luxury-primary text-xs">Save Profile Changes</button>
+              </form>
+            </div>
+
+            <!-- Password Update & Logout Card -->
+            <div class="lg:col-span-5 space-y-6">
+              <div class="rounded-3xl bg-theme-surface border border-theme-strong p-6 sm:p-8 shadow-theme-soft space-y-4">
+                <h3 class="font-serif-editorial text-2xl font-bold text-theme-primary">Update Vault Password</h3>
+                <form id="dash-password-form" class="space-y-4">
+                  <div>
+                    <label for="prof-curr-pass" class="block text-xs font-semibold uppercase tracking-wider text-theme-secondary mb-1.5">Current Password</label>
+                    <input id="prof-curr-pass" type="password" required placeholder="••••••••" class="input-luxury" />
+                  </div>
+                  <div>
+                    <label for="prof-new-pass" class="block text-xs font-semibold uppercase tracking-wider text-theme-secondary mb-1.5">New Password (Min 8 chars)</label>
+                    <input id="prof-new-pass" type="password" required placeholder="New secure password" class="input-luxury" />
+                  </div>
+                  <button type="submit" class="btn-luxury-outline w-full text-xs">Update Password</button>
+                </form>
+              </div>
+
+              <div class="rounded-3xl bg-theme-secondary border border-theme-strong p-6 flex items-center justify-between">
+                <div>
+                  <h4 class="font-bold text-sm text-theme-primary">Sign Out of Client Session</h4>
+                  <p class="text-xs text-theme-muted">End your current session safely</p>
+                </div>
+                <button type="button" data-action="logout" class="px-4 py-2.5 rounded-full bg-red-600 text-white text-xs font-semibold hover:bg-red-700 transition">
+                  Logout
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+      </main>
+    </div>
+
+  </div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

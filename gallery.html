@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <title>Portfolio &amp; Gallery | MEMORA STUDIO — Restored Heirlooms &amp; Albums</title>
+  <meta name="description" content="Explore MEMORA STUDIO's curated portfolio of before-and-after photo restorations, forensic colorizations, torn print recoveries, and luxury heirloom photo albums." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            ivory: '#F8F5EF',
+            cream: '#EDE4D6',
+            mutedbrown: '#8B6F58',
+            espresso: '#30251F',
+            gold: '#C5A46D',
+            charcoal: '#252525'
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Custom Studio Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="bg-theme-primary text-theme-primary antialiased selection:bg-[#C5A46D] selection:text-[#14110F]">
+
+  <!-- Reusable Sticky Header -->
+  <div id="site-header"></div>
+
+  <!-- MAIN CONTENT: EXACTLY 5 SECTIONS FOR PORTFOLIO / GALLERY -->
+  <main>
+
+    <!-- ===================================================================
+         SECTION 1: GALLERY HERO
+         =================================================================== -->
+    <section id="gallery-hero" class="py-16 lg:py-24 archival-grain border-b border-theme">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+          <div class="lg:col-span-7 space-y-6" data-aos="fade-up">
+            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-theme-secondary border border-theme-strong text-xs font-mono-code uppercase tracking-[0.22em] text-theme-gold font-semibold">
+              Curated Conservation Archive
+            </span>
+            <h1 class="font-serif-editorial text-4xl sm:text-5xl lg:text-6xl font-bold text-theme-primary leading-[1.12]">
+              An Exhibition of Reclaimed Time &amp; Bound Legacy.
+            </h1>
+            <p class="text-base sm:text-lg text-theme-secondary leading-relaxed max-w-2xl">
+              Every plate displayed in this gallery was shared with the kind permission of our client families. Inspect our before-and-after sliders or filter our masonry archive by discipline.
+            </p>
+            <div class="pt-2 cta-group">
+              <a href="#masonry-archive" class="btn-luxury-primary">
+                <span>Browse Archive</span>
+              </a>
+              <a href="#ba-gallery" class="btn-luxury-outline">
+                <span>Interactive Sliders</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5" data-aos="fade-left" data-aos-delay="100">
+            <div class="vintage-photo-frame rounded-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=950&q=85"
+                alt="Curated fine art photography exhibition wall"
+                class="w-full h-72 sm:h-80 object-cover rounded-xl"
+              />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 2: BEFORE & AFTER RESTORATION GALLERY (DUAL INTERACTIVE SLIDERS)
+         =================================================================== -->
+    <section id="ba-gallery" class="py-20 lg:py-28 bg-theme-secondary border-b border-theme">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="max-w-3xl mb-14" data-aos="fade-up">
+          <span class="text-xs font-mono-code uppercase tracking-[0.25em] text-theme-gold font-semibold block mb-2">Interactive Side-By-Side Plates</span>
+          <h2 class="font-serif-editorial text-3xl sm:text-4xl lg:text-5xl font-bold text-theme-primary">
+            Before &amp; After Restoration Gallery
+          </h2>
+          <p class="text-theme-secondary mt-3 text-base">
+            Slide the golden handle across either portrait below to inspect our micro-crack healing, silver-mirror removal, and forensic color grading.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+
+          <!-- Interactive Slider 1 -->
+          <div class="space-y-4" data-aos="fade-up">
+            <div class="ba-slider-container aspect-[4/3] w-full">
+              <img
+                src="assets/images/gallery-ba2-after.jpg"
+                alt="After — Restored & Colorized 1946 Bridal Silk Saree Portrait"
+                class="w-full h-full object-cover"
+              />
+              <span class="absolute top-3 right-3 z-10 px-3 py-1 rounded-full bg-[#30251F]/90 text-[#C5A46D] text-xs font-mono-code">After • Colorized</span>
+
+              <div class="ba-before-layer">
+                <img
+                  src="assets/images/gallery-ba2-before.jpg"
+                  alt="Before — Faded monochrome 1946 portrait"
+                  class="w-full h-full object-cover"
+                />
+                <span class="absolute top-3 left-3 z-10 px-3 py-1 rounded-full bg-black/80 text-white text-xs font-mono-code">Before • 1946 Original</span>
+              </div>
+
+              <div class="ba-handle">
+                <div class="ba-handle-button"><i data-lucide="move-horizontal" class="w-5 h-5"></i></div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between px-1">
+              <div>
+                <h3 class="font-serif-editorial text-2xl font-bold text-theme-primary">Lady Bai’s Salon Portrait (Bombay, 1946)</h3>
+                <p class="text-xs text-theme-secondary">Silver-gelatin grain recovery + crimson &amp; gold Banarasi silk colorization</p>
+              </div>
+              <span class="font-mono-code text-xs text-theme-gold font-semibold">21 Hrs</span>
+            </div>
+          </div>
+
+          <!-- Interactive Slider 2 -->
+          <div class="space-y-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="ba-slider-container aspect-[4/3] w-full">
+              <img
+                src="assets/images/gallery-ba3-after.jpg"
+                alt="After — Restored Early 20th-Century Family Portrait"
+                class="w-full h-full object-cover"
+              />
+              <span class="absolute top-3 right-3 z-10 px-3 py-1 rounded-full bg-[#30251F]/90 text-[#C5A46D] text-xs font-mono-code">After • Restored</span>
+
+              <div class="ba-before-layer">
+                <img
+                  src="assets/images/gallery-ba3-before.jpg"
+                  alt="Before — Torn and stained vintage family cabinet card"
+                  class="w-full h-full object-cover"
+                />
+                <span class="absolute top-3 left-3 z-10 px-3 py-1 rounded-full bg-black/80 text-white text-xs font-mono-code">Before • Torn Cabinet Card</span>
+              </div>
+
+              <div class="ba-handle">
+                <div class="ba-handle-button"><i data-lucide="move-horizontal" class="w-5 h-5"></i></div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between px-1">
+              <div>
+                <h3 class="font-serif-editorial text-2xl font-bold text-theme-primary">The Anglo-Indian Heritage Family Card (1918)</h3>
+                <p class="text-xs text-theme-secondary">Water stain extraction, torn corner rebuild &amp; archival sepia toning</p>
+              </div>
+              <span class="font-mono-code text-xs text-theme-gold font-semibold">29 Hrs</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 3: VINTAGE PHOTO RESTORATION PROJECTS (FILTERABLE MASONRY)
+         =================================================================== -->
+    <section id="masonry-archive" class="py-20 lg:py-28 bg-theme-primary border-b border-theme">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10" data-aos="fade-up">
+          <div>
+            <span class="text-xs font-mono-code uppercase tracking-[0.25em] text-theme-gold font-semibold block mb-2">Interactive Archive Filter</span>
+            <h2 class="font-serif-editorial text-3xl sm:text-4xl lg:text-5xl font-bold text-theme-primary">
+              Vintage Photo Restoration &amp; Album Projects
+            </h2>
+          </div>
+          <p id="gallery-filter-count" class="text-xs font-mono-code text-theme-gold font-semibold">
+            Showing 9 archival works
+          </p>
+        </div>
+
+        <!-- Required 7 Functional Category Filters -->
+        <div class="flex flex-wrap items-center gap-2.5 mb-12" role="tablist" aria-label="Portfolio Category Filters">
+          <button type="button" data-gallery-filter="all" class="px-4 py-2.5 rounded-full text-xs sm:text-sm font-semibold border border-theme-strong bg-[#30251F] text-[#F8F5EF] dark:bg-[#C5A46D] dark:text-[#14110F] transition">
+            All Projects
+          </button>
+          <button type="button" data-gallery-filter="photo-restoration" class="px-4 py-2.5 rounded-full text-xs sm:text-sm font-semibold border border-theme-strong bg-theme-surface text-theme-primary hover:border-[#C5A46D] transition">
+            Photo Restoration
+          </button>
+          <button type="button" data-gallery-filter="photo-colorization" class="px-4 py-2.5 rounded-full text-xs sm:text-sm font-semibold border border-theme-strong bg-theme-surface text-theme-primary hover:border-[#C5A46D] transition">
+            Photo Colorization
+          </button>
+          <button type="button" data-gallery-filter="damaged-repair" class="px-4 py-2.5 rounded-full text-xs sm:text-sm font-semibold border border-theme-strong bg-theme-surface text-theme-primary hover:border-[#C5A46D] transition">
+            Damaged Photo Repair
+          </button>
+          <button type="button" data-gallery-filter="wedding-albums" class="px-4 py-2.5 rounded-full text-xs sm:text-sm font-semibold border border-theme-strong bg-theme-surface text-theme-primary hover:border-[#C5A46D] transition">
+            Wedding Albums
+          </button>
+          <button type="button" data-gallery-filter="family-albums" class="px-4 py-2.5 rounded-full text-xs sm:text-sm font-semibold border border-theme-strong bg-theme-surface text-theme-primary hover:border-[#C5A46D] transition">
+            Family Albums
+          </button>
+          <button type="button" data-gallery-filter="heritage-albums" class="px-4 py-2.5 rounded-full text-xs sm:text-sm font-semibold border border-theme-strong bg-theme-surface text-theme-primary hover:border-[#C5A46D] transition">
+            Heritage Albums
+          </button>
+        </div>
+
+        <!-- Uniform Archival Portfolio Grid with Interactive Lightbox Previews -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 items-stretch">
+
+          <!-- Card 1: Photo Restoration -->
+          <article data-gallery-category="photo-restoration" class="rounded-2xl bg-theme-surface border border-theme-strong overflow-hidden group editorial-card flex flex-col justify-between h-full">
+            <div class="relative aspect-[4/3.2] overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1544717302-de2939b7ef71?auto=format&fit=crop&w=800&q=80"
+                alt="1938 Silver Gelatin Scholar Portrait"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <button
+                type="button"
+                data-lightbox-src="https://images.unsplash.com/photo-1544717302-de2939b7ef71?auto=format&fit=crop&w=1200&q=85"
+                data-lightbox-title="1938 Silver Gelatin Scholar Portrait"
+                data-lightbox-meta="Photo Restoration • Plate #G-01"
+                class="absolute top-3 right-3 w-10 h-10 rounded-full bg-black/70 text-[#C5A46D] hover:bg-[#C5A46D] hover:text-black flex items-center justify-center transition"
+                aria-label="Open Lightbox Preview"
+              >
+                <i data-lucide="expand" class="w-4 h-4"></i>
+              </button>
+            </div>
+            <div class="p-5">
+              <span class="text-[11px] font-mono-code text-theme-gold uppercase tracking-wider">Photo Restoration</span>
+              <h3 class="font-serif-editorial text-2xl font-bold text-theme-primary mt-0.5">1938 Presidency College Portrait</h3>
+              <p class="text-xs text-theme-secondary mt-1">Silver mirroring neutralized; optical micro-contrast restored.</p>
+            </div>
+          </article>
+
+          <!-- Card 2: Photo Colorization -->
+          <article data-gallery-category="photo-colorization" class="rounded-2xl bg-theme-surface border border-theme-strong overflow-hidden group editorial-card flex flex-col justify-between h-full">
+            <div class="relative aspect-[4/3.2] overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?auto=format&fit=crop&w=800&q=80"
+                alt="1955 Colorized Classical Portrait"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <button
+                type="button"
+                data-lightbox-src="https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?auto=format&fit=crop&w=1200&q=85"
+                data-lightbox-title="1955 Colorized Classical Portrait"
+                data-lightbox-meta="Forensic Colorization • Plate #G-02"
+                class="absolute top-3 right-3 w-10 h-10 rounded-full bg-black/70 text-[#C5A46D] hover:bg-[#C5A46D] hover:text-black flex items-center justify-center transition"
+                aria-label="Open Lightbox Preview"
+              >
+                <i data-lucide="expand" class="w-4 h-4"></i>
+              </button>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-[11px] font-mono-code text-theme-gold uppercase tracking-wider">Photo Colorization</span>
+                <h3 class="font-serif-editorial text-2xl font-bold text-theme-primary mt-0.5">1955 Madras Silk Portrait</h3>
+                <p class="text-xs text-theme-secondary mt-1">38 hand-painted chromatic layers from a 35mm B&amp;W film negative.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Damaged Photo Repair -->
+          <article data-gallery-category="damaged-repair,photo-restoration" class="rounded-2xl bg-theme-surface border border-theme-strong overflow-hidden group editorial-card flex flex-col justify-between h-full">
+            <div class="relative aspect-[4/3.2] overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80"
+                alt="1943 Torn Emulsion Recovery"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <button
+                type="button"
+                data-lightbox-src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=85"
+                data-lightbox-title="1943 Torn Emulsion Recovery"
+                data-lightbox-meta="Damaged Photo Repair • Plate #G-03"
+                class="absolute top-3 right-3 w-10 h-10 rounded-full bg-black/70 text-[#C5A46D] hover:bg-[#C5A46D] hover:text-black flex items-center justify-center transition"
+                aria-label="Open Lightbox Preview"
+              >
+                <i data-lucide="expand" class="w-4 h-4"></i>
+              </button>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-[11px] font-mono-code text-theme-gold uppercase tracking-wider">Damaged Photo Repair</span>
+                <h3 class="font-serif-editorial text-2xl font-bold text-theme-primary mt-0.5">1943 Four-Piece Tear Recovery</h3>
+                <p class="text-xs text-theme-secondary mt-1">Reassembled from four torn fragments with missing cheek texture rebuilt.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: Wedding Albums -->
+          <article data-gallery-category="wedding-albums" class="rounded-2xl bg-theme-surface border border-theme-strong overflow-hidden group editorial-card flex flex-col justify-between h-full">
+            <div class="relative aspect-[4/3.2] overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80"
+                alt="The Udaipur Palace Bridal Layflat Monograph"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <button
+                type="button"
+                data-lightbox-src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=85"
+                data-lightbox-title="The Udaipur Palace Bridal Layflat Monograph"
+                data-lightbox-meta="Wedding Albums • Bindery #W-14"
+                class="absolute top-3 right-3 w-10 h-10 rounded-full bg-black/70 text-[#C5A46D] hover:bg-[#C5A46D] hover:text-black flex items-center justify-center transition"
+                aria-label="Open Lightbox Preview"
+              >
+                <i data-lucide="expand" class="w-4 h-4"></i>
+              </button>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-[11px] font-mono-code text-theme-gold uppercase tracking-wider">Wedding Albums</span>
+                <h3 class="font-serif-editorial text-2xl font-bold text-theme-primary mt-0.5">Udaipur Royal Bridal Volume</h3>
+                <p class="text-xs text-theme-secondary mt-1">12×16" Ivory Tuscan calfskin with 24k gold crest debossing.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5: Family Albums -->
+          <article data-gallery-category="family-albums" class="rounded-2xl bg-theme-surface border border-theme-strong overflow-hidden group editorial-card flex flex-col justify-between h-full">
+            <div class="relative aspect-[4/3.2] overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?auto=format&fit=crop&w=800&q=80"
+                alt="The Malhotra Three-Generation Anthology"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <button
+                type="button"
+                data-lightbox-src="https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?auto=format&fit=crop&w=1200&q=85"
+                data-lightbox-title="The Malhotra Three-Generation Anthology"
+                data-lightbox-meta="Family Albums • Bindery #F-09"
+                class="absolute top-3 right-3 w-10 h-10 rounded-full bg-black/70 text-[#C5A46D] hover:bg-[#C5A46D] hover:text-black flex items-center justify-center transition"
+                aria-label="Open Lightbox Preview"
+              >
+                <i data-lucide="expand" class="w-4 h-4"></i>
+              </button>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-[11px] font-mono-code text-theme-gold uppercase tracking-wider">Family Albums</span>
+                <h3 class="font-serif-editorial text-2xl font-bold text-theme-primary mt-0.5">The Malhotra Family Anthology</h3>
+                <p class="text-xs text-theme-secondary mt-1">80 layflat pages uniting 1950s black-and-white prints with 2025 portraits.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6: Heritage Albums -->
+          <article data-gallery-category="heritage-albums" class="rounded-2xl bg-theme-surface border border-theme-strong overflow-hidden group editorial-card flex flex-col justify-between h-full">
+            <div class="relative aspect-[4/3.2] overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1476275466078-4007374efbbe?auto=format&fit=crop&w=800&q=80"
+                alt="Chettinad Ancestral House Monograph"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <button
+                type="button"
+                data-lightbox-src="https://images.unsplash.com/photo-1476275466078-4007374efbbe?auto=format&fit=crop&w=1200&q=85"
+                data-lightbox-title="Chettinad Ancestral House Monograph"
+                data-lightbox-meta="Heritage Albums • Bindery #H-04"
+                class="absolute top-3 right-3 w-10 h-10 rounded-full bg-black/70 text-[#C5A46D] hover:bg-[#C5A46D] hover:text-black flex items-center justify-center transition"
+                aria-label="Open Lightbox Preview"
+              >
+                <i data-lucide="expand" class="w-4 h-4"></i>
+              </button>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-[11px] font-mono-code text-theme-gold uppercase tracking-wider">Heritage Albums</span>
+                <h3 class="font-serif-editorial text-2xl font-bold text-theme-primary mt-0.5">Chettinad Ancestral Lineage Volume</h3>
+                <p class="text-xs text-theme-secondary mt-1">Hand-sewn archival volume with digitized property deeds &amp; family tree.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 7: Damaged Photo Repair -->
+          <article data-gallery-category="damaged-repair,photo-restoration" class="rounded-2xl bg-theme-surface border border-theme-strong overflow-hidden group editorial-card flex flex-col justify-between h-full">
+            <div class="relative aspect-[4/3.2] overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1504257432389-52343af06ae3?auto=format&fit=crop&w=800&q=80"
+                alt="1965 Monsoon Flood Damaged Portrait Recovery"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <button
+                type="button"
+                data-lightbox-src="https://images.unsplash.com/photo-1504257432389-52343af06ae3?auto=format&fit=crop&w=1200&q=85"
+                data-lightbox-title="1965 Monsoon Flood Damaged Portrait Recovery"
+                data-lightbox-meta="Damaged Photo Repair • Plate #G-07"
+                class="absolute top-3 right-3 w-10 h-10 rounded-full bg-black/70 text-[#C5A46D] hover:bg-[#C5A46D] hover:text-black flex items-center justify-center transition"
+                aria-label="Open Lightbox Preview"
+              >
+                <i data-lucide="expand" class="w-4 h-4"></i>
+              </button>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-[11px] font-mono-code text-theme-gold uppercase tracking-wider">Damaged Photo Repair</span>
+                <h3 class="font-serif-editorial text-2xl font-bold text-theme-primary mt-0.5">1965 Flood-Stained Portrait Rescue</h3>
+                <p class="text-xs text-theme-secondary mt-1">Fungus rings and water-stuck glass residue removed without losing grain.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 8: Photo Colorization -->
+          <article data-gallery-category="photo-colorization" class="rounded-2xl bg-theme-surface border border-theme-strong overflow-hidden group editorial-card flex flex-col justify-between h-full">
+            <div class="relative aspect-[4/3.2] overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&w=800&q=80"
+                alt="1952 Vintage Aviator Colorization"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <button
+                type="button"
+                data-lightbox-src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&w=1200&q=85"
+                data-lightbox-title="1952 Vintage Aviator Colorization"
+                data-lightbox-meta="Photo Colorization • Plate #G-08"
+                class="absolute top-3 right-3 w-10 h-10 rounded-full bg-black/70 text-[#C5A46D] hover:bg-[#C5A46D] hover:text-black flex items-center justify-center transition"
+                aria-label="Open Lightbox Preview"
+              >
+                <i data-lucide="expand" class="w-4 h-4"></i>
+              </button>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-[11px] font-mono-code text-theme-gold uppercase tracking-wider">Photo Colorization</span>
+                <h3 class="font-serif-editorial text-2xl font-bold text-theme-primary mt-0.5">1952 Squadron Leader Portrait</h3>
+                <p class="text-xs text-theme-secondary mt-1">Authenticated regiment badge and uniform chromatic restoration.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 9: Wedding & Heritage Album -->
+          <article data-gallery-category="wedding-albums,heritage-albums,family-albums" class="rounded-2xl bg-theme-surface border border-theme-strong overflow-hidden group editorial-card flex flex-col justify-between h-full">
+            <div class="relative aspect-[4/3.2] overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=800&q=80"
+                alt="Golden Jubilee Restored Wedding Album"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <button
+                type="button"
+                data-lightbox-src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=1200&q=85"
+                data-lightbox-title="Golden Jubilee Restored Wedding Album"
+                data-lightbox-meta="Heritage & Wedding Album • Bindery #H-19"
+                class="absolute top-3 right-3 w-10 h-10 rounded-full bg-black/70 text-[#C5A46D] hover:bg-[#C5A46D] hover:text-black flex items-center justify-center transition"
+                aria-label="Open Lightbox Preview"
+              >
+                <i data-lucide="expand" class="w-4 h-4"></i>
+              </button>
+            </div>
+            <div class="p-5">
+              <span class="text-[11px] font-mono-code text-theme-gold uppercase tracking-wider">Heritage &amp; Wedding Albums</span>
+              <h3 class="font-serif-editorial text-2xl font-bold text-theme-primary mt-0.5">1974 Golden Jubilee Re-Edition</h3>
+              <p class="text-xs text-theme-secondary mt-1">45 faded wedding prints restored and bound in burgundy calfskin.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 4: PREMIUM ALBUM DESIGN COLLECTION
+         =================================================================== -->
+    <section id="album-design-collection" class="py-20 lg:py-28 bg-[#221A15] text-[#F8F5EF] border-b border-[#C5A46D]/25">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="max-w-3xl mb-14" data-aos="fade-up">
+          <span class="text-xs font-mono-code uppercase tracking-[0.25em] text-[#C5A46D] font-semibold block mb-2">Inside Our Bespoke Spreads</span>
+          <h2 class="font-serif-editorial text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+            Premium Album Design Collection
+          </h2>
+          <p class="text-[#D5C7B8] mt-3 text-base">
+            We design every spread with generous editorial margins, museum-inspired serif typography, and harmonious color pacing.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="rounded-2xl bg-[#2D231C] border border-[#C5A46D]/30 overflow-hidden editorial-card" data-aos="fade-up">
+            <img
+              src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=750&q=80"
+              alt="Minimalist Editorial Spread Layout"
+              class="w-full h-56 object-cover"
+            />
+            <div class="p-6">
+              <span class="text-xs font-mono-code text-[#C5A46D]">STYLE 01 • GALLERY MINIMAL</span>
+              <h3 class="font-serif-editorial text-2xl font-bold text-white mt-1">Museum Passe-Partout</h3>
+              <p class="text-xs text-[#D5C7B8] mt-2">Wide warm-ivory borders frame single hero portraits with archival plate numbers and dates.</p>
+            </div>
+          </div>
+
+          <div class="rounded-2xl bg-[#2D231C] border border-[#C5A46D]/30 overflow-hidden editorial-card" data-aos="fade-up" data-aos-delay="100">
+            <img
+              src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=750&q=80"
+              alt="Narrative Chronicle Spread Layout"
+              class="w-full h-56 object-cover"
+            />
+            <div class="p-6">
+              <span class="text-xs font-mono-code text-[#C5A46D]">STYLE 02 • BIOGRAPHICAL CHRONICLE</span>
+              <h3 class="font-serif-editorial text-2xl font-bold text-white mt-1">Storyteller &amp; Letters</h3>
+              <p class="text-xs text-[#D5C7B8] mt-2">Pairs restored family photographs with scanned handwritten letters, telegrams, and recipes.</p>
+            </div>
+          </div>
+
+          <div class="rounded-2xl bg-[#2D231C] border border-[#C5A46D]/30 overflow-hidden editorial-card" data-aos="fade-up" data-aos-delay="200">
+            <img
+              src="https://images.unsplash.com/photo-1456735190827-d1262f71b8a3?auto=format&fit=crop&w=750&q=80"
+              alt="Panoramic Full-Bleed Spread Layout"
+              class="w-full h-56 object-cover"
+            />
+            <div class="p-6">
+              <span class="text-xs font-mono-code text-[#C5A46D]">STYLE 03 • CINEMATIC LAYFLAT</span>
+              <h3 class="font-serif-editorial text-2xl font-bold text-white mt-1">24-Inch Panoramic Spreads</h3>
+              <p class="text-xs text-[#D5C7B8] mt-2">Unbroken edge-to-edge group wedding and ancestral estate photographs across seamless layflat paper.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 5: FEATURED PROJECTS & CONSULTATION CTA
+         =================================================================== -->
+    <section id="featured-commission-cta" class="py-20 lg:py-28 bg-theme-primary">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="rounded-3xl bg-theme-surface border border-theme-strong shadow-theme-elevated p-8 sm:p-12 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div class="lg:col-span-5">
+            <div class="vintage-photo-frame rounded-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=800&q=80"
+                alt="Featured Heritage Celebration Commission"
+                class="w-full h-72 object-cover rounded-xl"
+              />
+            </div>
+          </div>
+          <div class="lg:col-span-7 space-y-5">
+            <span class="text-xs font-mono-code uppercase tracking-[0.25em] text-theme-gold font-semibold block">Your Family Archive Could Be Next</span>
+            <h2 class="font-serif-editorial text-3xl sm:text-4xl lg:text-5xl font-bold text-theme-primary leading-tight">
+              Ready to Transform Your Faded Prints Into an Heirloom Masterpiece?
+            </h2>
+            <p class="text-sm sm:text-base text-theme-secondary leading-relaxed">
+              Upload a single photograph to test our artistry, or book a private consultation to plan a multi-decade family heritage book.
+            </p>
+            <div class="pt-2 cta-group">
+              <button type="button" data-open-upload-modal data-package-name="Portfolio-Inspired Restoration" class="btn-luxury-primary">
+                <i data-lucide="upload" class="w-4 h-4"></i>
+                <span>Upload Photograph</span>
+              </button>
+              <a href="contact.html" class="btn-luxury-outline">
+                <span>Book Consultation</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Reusable Consistent Footer -->
+  <div id="site-footer"></div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <title>Contact Us | MEMORA STUDIO — Archival Concierge &amp; Consultation</title>
+  <meta name="description" content="Connect with MEMORA STUDIO's photo restoration specialists and bookbinders. Visit our Kala Ghoda flagship atelier or book a private consultation." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            ivory: '#F8F5EF',
+            cream: '#EDE4D6',
+            mutedbrown: '#8B6F58',
+            espresso: '#30251F',
+            gold: '#C5A46D',
+            charcoal: '#252525'
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Custom Studio Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="bg-theme-primary text-theme-primary antialiased selection:bg-[#C5A46D] selection:text-[#14110F]">
+
+  <!-- Reusable Sticky Header -->
+  <div id="site-header"></div>
+
+  <!-- MAIN CONTENT: EXACTLY 5 SECTIONS FOR CONTACT US -->
+  <main>
+
+    <!-- ===================================================================
+         SECTION 1: CONTACT HERO
+         =================================================================== -->
+    <section id="contact-hero" class="py-16 lg:py-24 archival-grain border-b border-theme">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+          <div class="lg:col-span-7 space-y-5" data-aos="fade-up">
+            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-theme-secondary border border-theme-strong text-xs font-mono-code uppercase tracking-[0.22em] text-theme-gold font-semibold">
+              Archival Concierge Desk
+            </span>
+            <h1 class="font-serif-editorial text-4xl sm:text-5xl lg:text-6xl font-bold text-theme-primary leading-[1.12]">
+              Every Great Heirloom Begins With a Conversation.
+            </h1>
+            <p class="text-base sm:text-lg text-theme-secondary leading-relaxed max-w-2xl">
+              Whether you hold a single torn photograph or an entire trunk of ancestral negatives, our conservation specialists are ready to guide you with care, discretion, and transparency.
+            </p>
+            <div class="pt-2 cta-group">
+              <a href="#contact-form-section" class="btn-luxury-primary">
+                <span>Send an Enquiry</span>
+              </a>
+              <a href="#consultation" class="btn-luxury-outline">
+                <span>Book Appointment</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5" data-aos="fade-left" data-aos-delay="100">
+            <div class="vintage-photo-frame rounded-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=900&q=80"
+                alt="MEMORA STUDIO client concierge communication desk"
+                class="w-full h-72 sm:h-80 object-cover rounded-xl"
+              />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 2: CONTACT INFORMATION – ADDRESS, EMAIL, PHONE & HOURS
+         =================================================================== -->
+    <section id="contact-information" class="py-20 lg:py-28 bg-theme-secondary border-b border-theme">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <!-- Left 4 Contact Cards -->
+          <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6" data-aos="fade-up">
+
+            <!-- Card 1: Flagship Address -->
+            <div class="rounded-2xl bg-theme-surface border border-theme-strong p-6 space-y-3 editorial-card">
+              <div class="w-11 h-11 rounded-xl bg-[#30251F] text-[#C5A46D] flex items-center justify-center">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </div>
+              <span class="text-xs font-mono-code text-theme-gold uppercase tracking-wider">Flagship Conservation Atelier</span>
+              <h3 class="font-serif-editorial text-2xl font-bold text-theme-primary">Mumbai Studio Address</h3>
+              <p class="text-sm text-theme-secondary leading-relaxed">
+                Suite 402, Heritage Art District, Rampart Row, Kala Ghoda, Fort, Mumbai, Maharashtra 400001
+              </p>
+              <p class="text-xs font-mono-code text-theme-muted pt-1">Satellite Drop-off: New Delhi • Bengaluru</p>
+            </div>
+
+            <!-- Card 2: Email Addresses -->
+            <div class="rounded-2xl bg-theme-surface border border-theme-strong p-6 space-y-3 editorial-card">
+              <div class="w-11 h-11 rounded-xl bg-[#30251F] text-[#C5A46D] flex items-center justify-center">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+              </div>
+              <span class="text-xs font-mono-code text-theme-gold uppercase tracking-wider">Direct Electronic Mail</span>
+              <h3 class="font-serif-editorial text-2xl font-bold text-theme-primary">Email Our Curators</h3>
+              <p class="text-sm text-theme-secondary">
+                <strong>General &amp; Quotes:</strong><br/>
+                <a href="mailto:concierge@memorastudio.in" class="text-theme-gold hover:underline">concierge@memorastudio.in</a>
+              </p>
+              <p class="text-sm text-theme-secondary">
+                <strong>Bespoke Bindery:</strong><br/>
+                <a href="mailto:albums@memorastudio.in" class="text-theme-gold hover:underline">albums@memorastudio.in</a>
+              </p>
+            </div>
+
+            <!-- Card 3: Phone & WhatsApp -->
+            <div class="rounded-2xl bg-theme-surface border border-theme-strong p-6 space-y-3 editorial-card">
+              <div class="w-11 h-11 rounded-xl bg-[#30251F] text-[#C5A46D] flex items-center justify-center">
+                <i data-lucide="phone-call" class="w-5 h-5"></i>
+              </div>
+              <span class="text-xs font-mono-code text-theme-gold uppercase tracking-wider">Direct Voice &amp; WhatsApp</span>
+              <h3 class="font-serif-editorial text-2xl font-bold text-theme-primary">Telephone Numbers</h3>
+              <p class="text-sm text-theme-secondary">
+                <strong>Studio Landline:</strong> +91 22 6789 4321<br/>
+                <strong>Archival WhatsApp:</strong> +91 98201 54321
+              </p>
+              <p class="text-xs font-mono-code text-theme-muted pt-1">Instant photo assessment via WhatsApp</p>
+            </div>
+
+            <!-- Card 4: Business Hours -->
+            <div class="rounded-2xl bg-theme-surface border border-theme-strong p-6 space-y-3 editorial-card">
+              <div class="w-11 h-11 rounded-xl bg-[#30251F] text-[#C5A46D] flex items-center justify-center">
+                <i data-lucide="clock" class="w-5 h-5"></i>
+              </div>
+              <span class="text-xs font-mono-code text-theme-gold uppercase tracking-wider">Viewing &amp; Lab Hours</span>
+              <h3 class="font-serif-editorial text-2xl font-bold text-theme-primary">Business Hours</h3>
+              <p class="text-sm text-theme-secondary">
+                <strong>Mon – Sat:</strong> 10:00 AM – 7:30 PM IST<br/>
+                <strong>Sunday:</strong> Private Appointments Only
+              </p>
+              <p class="text-xs font-mono-code text-emerald-600 dark:text-emerald-400 pt-1">● Conservation Desk Currently Open</p>
+            </div>
+
+          </div>
+
+          <!-- Right Atelier Interior & Map Preview -->
+          <div class="lg:col-span-5" data-aos="fade-left">
+            <div class="rounded-2xl bg-theme-surface border border-theme-strong overflow-hidden shadow-theme-elevated">
+              <img
+                src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=850&q=80"
+                alt="MEMORA Flagship Studio Reception Lounge"
+                class="w-full h-64 object-cover"
+              />
+              <div class="p-6 space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-mono-code text-theme-gold font-semibold">KALA GHODA HERITAGE PRECINCT</span>
+                  <span class="text-xs text-theme-muted">Valet Parking Available</span>
+                </div>
+                <h4 class="font-serif-editorial text-2xl font-bold text-theme-primary">Private Walk-In Print Drop-Off</h4>
+                <p class="text-xs text-theme-secondary leading-relaxed">
+                  Clients bringing fragile glass-plate negatives or century-old family albums are welcomed into our climate-controlled reception lounge.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 3: CONTACT & ENQUIRY FORM
+         =================================================================== -->
+    <section id="contact-form-section" class="py-20 lg:py-28 bg-theme-primary border-b border-theme">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="rounded-3xl bg-theme-surface border border-theme-strong p-8 sm:p-12 shadow-theme-elevated" data-aos="fade-up">
+          <div class="max-w-2xl mb-8">
+            <span class="text-xs font-mono-code uppercase tracking-[0.25em] text-theme-gold font-semibold block mb-2">Direct Message &amp; Scan Submission</span>
+            <h2 class="font-serif-editorial text-3xl sm:text-4xl font-bold text-theme-primary">
+              Contact &amp; Restoration Enquiry Form
+            </h2>
+            <p class="text-sm text-theme-secondary mt-2">
+              All fields marked with an asterisk (*) are required. Our Senior Conservator responds personally within 2 business hours.
+            </p>
+          </div>
+
+          <form data-validate-form="contact" class="space-y-5" novalidate>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="c-fullname" class="block text-xs font-semibold uppercase tracking-wider text-theme-secondary mb-1.5">Full Name *</label>
+                <input id="c-fullname" type="text" required placeholder="e.g., Nandini Kulkarni" class="input-luxury" />
+              </div>
+              <div>
+                <label for="c-email" class="block text-xs font-semibold uppercase tracking-wider text-theme-secondary mb-1.5">Email Address *</label>
+                <input id="c-email" type="email" required placeholder="nandini@example.com" class="input-luxury" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="c-phone" class="block text-xs font-semibold uppercase tracking-wider text-theme-secondary mb-1.5">Phone / WhatsApp Number *</label>
+                <input id="c-phone" type="tel" required placeholder="+91 98201 12345" class="input-luxury" />
+              </div>
+              <div>
+                <label for="c-category" class="block text-xs font-semibold uppercase tracking-wider text-theme-secondary mb-1.5">Service Category *</label>
+                <select id="c-category" required class="input-luxury">
+                  <option value="">Choose a service category...</option>
+                  <option value="basic-restoration">Basic / Standard Photo Restoration</option>
+                  <option value="complex-restoration">Complex / Torn Photo Reconstruction</option>
+                  <option value="colorization">Forensic Black &amp; White Colorization</option>
+                  <option value="wedding-album">Luxury Layflat Wedding Album</option>
+                  <option value="heritage-album">Custom Family Heritage Volume</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="c-subject" class="block text-xs font-semibold uppercase tracking-wider text-theme-secondary mb-1.5">Subject / Project Title *</label>
+              <input id="c-subject" type="text" required placeholder="e.g., Restoring 1952 Grandparents Wedding Portrait" class="input-luxury" />
+            </div>
+
+            <div>
+              <label for="c-details" class="block text-xs font-semibold uppercase tracking-wider text-theme-secondary mb-1.5">Detailed Requirements *</label>
+              <textarea id="c-details" rows="4" required placeholder="Describe the condition of your photographs, number of images, desired print or album size, and any special deadlines..." class="input-luxury"></textarea>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <input id="c-privacy" type="checkbox" required class="w-4 h-4 accent-[#C5A46D] rounded" />
+              <label for="c-privacy" class="text-xs text-theme-secondary">
+                I agree to MEMORA STUDIO’s Private Family Vault confidentiality policy. *
+              </label>
+            </div>
+
+            <button type="submit" class="btn-luxury-primary w-full sm:w-auto">
+              <i data-lucide="send" class="w-4 h-4"></i>
+              <span>Submit Official Enquiry</span>
+            </button>
+
+            <div data-form-status class="hidden"></div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 4: STUDIO CONSULTATION / APPOINTMENT REQUEST
+         =================================================================== -->
+    <section id="consultation" class="py-20 lg:py-28 bg-[#231B16] text-[#F8F5EF] border-b border-[#C5A46D]/25">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <!-- Left Visual & Consultation Benefits -->
+          <div class="lg:col-span-5 space-y-6" data-aos="fade-right">
+            <span class="text-xs font-mono-code uppercase tracking-[0.25em] text-[#C5A46D] font-semibold block">One-on-One Curatorial Session</span>
+            <h2 class="font-serif-editorial text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
+              Book a Private Studio or Video Consultation
+            </h2>
+            <p class="text-sm text-[#D5C7B8] leading-relaxed">
+              Planning a multi-generational heritage album or bringing in fragile physical prints? Reserve a complimentary 30-minute session with our Chief Archivist.
+            </p>
+            <div class="rounded-2xl overflow-hidden border border-[#C5A46D]/35">
+              <img
+                src="https://images.unsplash.com/photo-1517502884422-41eaead166d4?auto=format&fit=crop&w=800&q=80"
+                alt="Private Archival Consultation Suite"
+                class="w-full h-56 object-cover"
+              />
+            </div>
+          </div>
+
+          <!-- Right Appointment Scheduler Form -->
+          <div class="lg:col-span-7 rounded-3xl bg-[#2E241E] border border-[#C5A46D]/35 p-8 sm:p-10 shadow-2xl" data-aos="fade-left">
+            <h3 class="font-serif-editorial text-2xl sm:text-3xl font-bold text-white mb-6">Reserve Your Consultation Slot</h3>
+
+            <form data-validate-form="appointment" class="space-y-4" novalidate>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="app-name" class="block text-xs font-semibold uppercase tracking-wider text-[#D5C7B8] mb-1.5">Your Name *</label>
+                  <input id="app-name" type="text" required placeholder="e.g., Vikramjeet Gill" class="w-full rounded-xl bg-[#1A1411] border border-[#C5A46D]/35 px-4 py-3 text-sm text-white placeholder-[#A6907C] focus:outline-none focus:border-[#C5A46D]" />
+                </div>
+                <div>
+                  <label for="app-email" class="block text-xs font-semibold uppercase tracking-wider text-[#D5C7B8] mb-1.5">Email Address *</label>
+                  <input id="app-email" type="email" required placeholder="vikram@example.com" class="w-full rounded-xl bg-[#1A1411] border border-[#C5A46D]/35 px-4 py-3 text-sm text-white placeholder-[#A6907C] focus:outline-none focus:border-[#C5A46D]" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div>
+                  <label for="app-mode" class="block text-xs font-semibold uppercase tracking-wider text-[#D5C7B8] mb-1.5">Session Format *</label>
+                  <select id="app-mode" required class="w-full rounded-xl bg-[#1A1411] border border-[#C5A46D]/35 px-4 py-3 text-sm text-white focus:outline-none focus:border-[#C5A46D]">
+                    <option value="in-studio">In-Studio (Mumbai)</option>
+                    <option value="video-call">Private Zoom / Google Meet</option>
+                    <option value="home-pickup">Home Archival Visit</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="app-date" class="block text-xs font-semibold uppercase tracking-wider text-[#D5C7B8] mb-1.5">Preferred Date *</label>
+                  <input id="app-date" type="date" required class="w-full rounded-xl bg-[#1A1411] border border-[#C5A46D]/35 px-4 py-3 text-sm text-white focus:outline-none focus:border-[#C5A46D]" />
+                </div>
+                <div>
+                  <label for="app-time" class="block text-xs font-semibold uppercase tracking-wider text-[#D5C7B8] mb-1.5">Time Slot *</label>
+                  <select id="app-time" required class="w-full rounded-xl bg-[#1A1411] border border-[#C5A46D]/35 px-4 py-3 text-sm text-white focus:outline-none focus:border-[#C5A46D]">
+                    <option value="11:00 AM">11:00 AM IST</option>
+                    <option value="02:30 PM">02:30 PM IST</option>
+                    <option value="04:30 PM">04:30 PM IST</option>
+                    <option value="06:00 PM">06:00 PM IST</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label for="app-notes" class="block text-xs font-semibold uppercase tracking-wider text-[#D5C7B8] mb-1.5">What Would You Like to Discuss? *</label>
+                <textarea id="app-notes" rows="2" required placeholder="e.g., Inspecting leather swatches for a 50th Anniversary album and 12 vintage prints..." class="w-full rounded-xl bg-[#1A1411] border border-[#C5A46D]/35 px-4 py-3 text-sm text-white placeholder-[#A6907C] focus:outline-none focus:border-[#C5A46D]"></textarea>
+              </div>
+
+              <button type="submit" class="btn-gold w-full">
+                <i data-lucide="calendar-check" class="w-4 h-4"></i>
+                <span>Confirm Appointment Request</span>
+              </button>
+
+              <div data-form-status class="hidden"></div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 5: FREQUENTLY ASKED QUESTIONS AND FINAL CTA
+         =================================================================== -->
+    <section id="contact-faq" class="py-20 lg:py-28 bg-theme-primary">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <div class="lg:col-span-7 space-y-4">
+            <span class="text-xs font-mono-code uppercase tracking-[0.25em] text-theme-gold font-semibold block">Shipping &amp; Submission Guide</span>
+            <h2 class="font-serif-editorial text-3xl sm:text-4xl font-bold text-theme-primary mb-6">
+              Frequently Asked Questions
+            </h2>
+
+            <div class="rounded-2xl bg-theme-surface border border-theme-strong overflow-hidden">
+              <button type="button" data-faq-trigger class="w-full p-5 text-left flex items-center justify-between gap-4 font-semibold text-sm sm:text-base text-theme-primary">
+                <span>Do I need to mail my physical photograph, or can I upload a scan?</span>
+                <i data-lucide="chevron-down" data-faq-icon class="w-4 h-4 text-theme-gold transition-transform"></i>
+              </button>
+              <div class="px-5 pb-5 text-sm text-theme-secondary leading-relaxed">
+                Over 80% of our clients simply upload a flatbed scan or glare-free smartphone photo via our Customer Dashboard. If your print is stuck to glass or you lack a scanner, we arrange insured doorstep courier pickup.
+              </div>
+            </div>
+
+            <div class="rounded-2xl bg-theme-surface border border-theme-strong overflow-hidden">
+              <button type="button" data-faq-trigger class="w-full p-5 text-left flex items-center justify-between gap-4 font-semibold text-sm sm:text-base text-theme-primary">
+                <span>How safe are my original family photographs if I courier them to Mumbai?</span>
+                <i data-lucide="chevron-down" data-faq-icon class="w-4 h-4 text-theme-gold transition-transform"></i>
+              </button>
+              <div class="px-5 pb-5 text-sm text-theme-secondary leading-relaxed hidden">
+                Every physical parcel is logged with barcode tracking upon arrival, handled exclusively with nitrile archival gloves, stored in a fireproof humidity-controlled cabinet, and returned in acid-free Mylar sleeves.
+              </div>
+            </div>
+
+            <div class="rounded-2xl bg-theme-surface border border-theme-strong overflow-hidden">
+              <button type="button" data-faq-trigger class="w-full p-5 text-left flex items-center justify-between gap-4 font-semibold text-sm sm:text-base text-theme-primary">
+                <span>Do you ship custom leather albums internationally?</span>
+                <i data-lucide="chevron-down" data-faq-icon class="w-4 h-4 text-theme-gold transition-transform"></i>
+              </button>
+              <div class="px-5 pb-5 text-sm text-theme-secondary leading-relaxed hidden">
+                Yes, we ship worldwide via DHL Express in custom foam-lined wooden transit crates to the USA, UK, Canada, UAE, Australia, and Singapore.
+              </div>
+            </div>
+          </div>
+
+          <!-- Final CTA Card -->
+          <div class="lg:col-span-5 rounded-3xl bg-theme-secondary border border-theme-strong p-8 sm:p-10 space-y-5">
+            <div class="w-12 h-12 rounded-xl bg-[#30251F] text-[#C5A46D] flex items-center justify-center">
+              <i data-lucide="sparkles" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-serif-editorial text-3xl font-bold text-theme-primary">
+              Ready to Upload Your Photograph Right Now?
+            </h3>
+            <p class="text-sm text-theme-secondary leading-relaxed">
+              Log in to our interactive Customer Dashboard to drag-and-drop your vintage photos, track 7-stage restoration progress, and approve proofs online.
+            </p>
+            <div class="pt-2 cta-group">
+              <a href="dashboard.html" class="btn-luxury-primary">
+                <span>Customer Portal</span>
+              </a>
+              <button type="button" data-open-upload-modal data-package-name="Direct Contact Page Upload" class="btn-luxury-outline">
+                <span>Quick Upload</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Reusable Consistent Footer -->
+  <div id="site-footer"></div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
+
