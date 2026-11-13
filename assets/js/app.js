@@ -342,7 +342,7 @@ function initSharedHeaderFooter() {
             </div>
           </div>
 
-          <!-- Bottom Copyright, Legal & Back-To-Top -->
+          <!-- Bottom Copyright & Legal -->
           <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-5 text-xs text-theme-muted">
             <p class="text-center md:text-left">© ${new Date().getFullYear()} MEMORA STUDIO Pvt. Ltd. All Rights Reserved. Crafted with Archival Precision.</p>
             
@@ -351,15 +351,21 @@ function initSharedHeaderFooter() {
               <a href="pricing.html" class="hover:text-theme-gold transition whitespace-nowrap">Terms &amp; Archival Guarantee</a>
               <a href="dashboard.html" class="hover:text-theme-gold transition whitespace-nowrap">Track Order Status</a>
             </div>
-
-            <!-- Back to Top Arrow Button (Icon Only) -->
-            <button type="button" data-action="back-to-top" class="back-to-top-btn shrink-0" aria-label="Scroll back to top of page" title="Back to Top">
-              <i data-lucide="arrow-up" class="w-4 h-4"></i>
-            </button>
           </div>
         </div>
       </footer>
     `;
+  }
+
+  if (!document.querySelector('[data-action="back-to-top"]')) {
+    const backToTopBtn = document.createElement('button');
+    backToTopBtn.type = 'button';
+    backToTopBtn.setAttribute('data-action', 'back-to-top');
+    backToTopBtn.className = 'back-to-top-btn';
+    backToTopBtn.setAttribute('aria-label', 'Scroll back to top of page');
+    backToTopBtn.title = 'Back to Top';
+    backToTopBtn.innerHTML = '<i data-lucide="arrow-up" class="w-4 h-4"></i>';
+    document.body.appendChild(backToTopBtn);
   }
 
   if (window.lucide) {

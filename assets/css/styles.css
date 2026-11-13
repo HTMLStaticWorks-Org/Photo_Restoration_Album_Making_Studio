@@ -698,20 +698,39 @@ html.dark .social-icon-btn {
   box-shadow: 0 10px 24px -4px rgba(230, 0, 35, 0.45);
 }
 
-/* Back to Top Arrow Button (Icon Only Circular Button) */
+/* Back to Top Arrow Button (Fixed Floating Circular Button) */
 .back-to-top-btn {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 45;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.6rem;
-  height: 2.6rem;
+  width: 2.75rem;
+  height: 2.75rem;
   border-radius: 9999px;
-  background-color: rgba(197, 164, 109, 0.15);
-  border: 1px solid var(--border-strong);
-  color: var(--accent-gold);
+  background-color: #30251F;
+  border: 1.5px solid var(--accent-gold);
+  color: #F8F5EF;
+  box-shadow: 0 10px 25px -5px rgba(48, 37, 31, 0.38);
   transition: all 0.3s ease;
   cursor: pointer;
   text-decoration: none;
+}
+
+html.dark .back-to-top-btn {
+  background-color: rgba(33, 27, 24, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.65);
+}
+
+[dir="rtl"] .back-to-top-btn {
+  right: auto;
+  left: 1.5rem;
 }
 
 .back-to-top-btn:hover {

@@ -715,7 +715,7 @@ function renderAlbumsView() {
     <div class="rounded-2xl bg-theme-surface border border-theme-strong overflow-hidden flex flex-col md:flex-row shadow-theme-soft group hover:border-[#C5A46D] transition-all duration-300">
       <!-- Album Cover / Spread Image Preview -->
       <div class="md:w-5/12 relative overflow-hidden bg-black/5 min-h-[200px] max-h-[260px] md:max-h-none shrink-0">
-        <img src="${a.previewImg}" alt="${a.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+        <img src="${a.previewImg}" alt="${a.title}" class="w-full h-full md:absolute md:inset-0 object-cover group-hover:scale-105 transition-transform duration-500" />
         <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/75 backdrop-blur-sm text-[#C5A46D] font-mono-code text-[11px] font-bold border border-[#C5A46D]/30 shadow-sm">
           #${a.id}
         </span>
